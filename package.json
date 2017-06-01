@@ -1,0 +1,18 @@
+{
+  "name": "PMIO",
+  "version": "1.0.0",
+  "description": "This_ProcessMaker_IO_API_provides_access_to_a_BPMN_2_0_compliant_workflow_engine_api_that_is_designed_to_be_used_as_a_microservice_to_support_enterprise_cloud_applications_The_current_Alpha_1_0_version_supports_most_of_the_descriptive_class_of_the_BPMN_2_0_specification_",
+  "license": "Apache-2.0",
+  "main": "src/Processmaker/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "dependencies": {
+    "superagent": "1.7.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
