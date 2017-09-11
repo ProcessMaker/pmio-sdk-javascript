@@ -3,13 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**description** | **String** |  | [optional] 
 **processId** | **String** |  | 
 **parentInstanceId** | **String** |  | [optional] 
 **initUserId** | **String** |  | [optional] 
 **pin** | **String** |  | [optional] 
-**duration** | **Number** |  | [optional] 
+**duration** | **Integer** |  | [optional] 
 **status** | **String** |  | [default to &#39;RUNNING&#39;]
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 

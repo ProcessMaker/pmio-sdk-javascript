@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **defaultLang** | **String** |  | [optional] [default to &#39;en_US&#39;]
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
-**clients** | **[Number]** |  | [optional] 
+**clients** | **[Integer]** |  | [optional] 
 
 
 <a name="StatusEnum"></a>

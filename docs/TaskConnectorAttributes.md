@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**taskId** | **Number** |  | [optional] 
+**taskId** | **Integer** |  | [optional] 
 **connectorClass** | **String** |  | [optional] [default to &#39;HttpConnector&#39;]
 **inputParameters** | **String** |  | [optional] [default to &#39;[]&#39;]
 **outputParameters** | **String** |  | [optional] [default to &#39;[]&#39;]

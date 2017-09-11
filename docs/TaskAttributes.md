@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **start** | **Boolean** |  | [default to false]
 **sendLastEmail** | **Boolean** |  | [default to true]
 **derivationScreenTpl** | **String** |  | [optional] 
-**selfserviceTimeout** | **Number** |  | 
+**selfserviceTimeout** | **Integer** |  | 
 **selfserviceTime** | **String** |  | [optional] 
 **selfserviceTimeUnit** | **String** |  | [optional] 
 **selfserviceExecution** | **String** |  | [optional] 

@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | **[String]** | User ID&#39;s array | 
+**users** | **[String]** | User IDs array | 
 
 

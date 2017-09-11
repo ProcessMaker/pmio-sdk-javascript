@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -62,7 +62,7 @@
    * @param viewAdditionalDocumentation {Boolean} 
    * @param start {Boolean} 
    * @param sendLastEmail {Boolean} 
-   * @param selfserviceTimeout {Number} 
+   * @param selfserviceTimeout {Integer} 
    */
   var exports = function(name, processId, type, assignType, transferFly, canUpload, viewUpload, viewAdditionalDocumentation, start, sendLastEmail, selfserviceTimeout) {
     var _this = this;
@@ -157,7 +157,7 @@
         obj['derivation_screen_tpl'] = ApiClient.convertToType(data['derivation_screen_tpl'], 'String');
       }
       if (data.hasOwnProperty('selfservice_timeout')) {
-        obj['selfservice_timeout'] = ApiClient.convertToType(data['selfservice_timeout'], 'Number');
+        obj['selfservice_timeout'] = ApiClient.convertToType(data['selfservice_timeout'], 'Integer');
       }
       if (data.hasOwnProperty('selfservice_time')) {
         obj['selfservice_time'] = ApiClient.convertToType(data['selfservice_time'], 'String');
@@ -261,7 +261,7 @@
    */
   exports.prototype['derivation_screen_tpl'] = undefined;
   /**
-   * @member {Number} selfservice_timeout
+   * @member {Integer} selfservice_timeout
    */
   exports.prototype['selfservice_timeout'] = undefined;
   /**

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **finishDate** | **String** |  | [optional] 
 **taskDueDate** | **String** |  | [optional] 
 **riskDate** | **String** |  | [optional] 
-**duration** | **Number** |  | [optional] 
+**duration** | **Integer** |  | [optional] 
 **instanceOverduePercentage** | **Number** |  | [optional] 
 **data** | **String** |  | [optional] 
 **content** | **String** |  | [optional] 

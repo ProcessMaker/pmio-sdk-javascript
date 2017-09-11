@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groups** | **[String]** | Group ID&#39;s array | 
+**groups** | **[String]** | Group IDs array | 
 
 

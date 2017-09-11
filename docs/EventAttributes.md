@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
 **processId** | **String** |  | 
-**messageId** | **Number** |  | [optional] 
+**messageId** | **Integer** |  | [optional] 
 **type** | **String** |  | 
 **definition** | **String** |  | 
 **interrupting** | **Boolean** |  | [optional] 

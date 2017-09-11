@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -63,18 +63,6 @@
       // uncomment below and update the code to test InstanceAttributes
       //var instane = new PMIO.InstanceAttributes();
       //expect(instance).to.be.a(PMIO.InstanceAttributes);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new PMIO.InstanceAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instane = new PMIO.InstanceAttributes();
-      //expect(instance).to.be();
     });
 
     it('should have the property processId (base name: "process_id")', function() {

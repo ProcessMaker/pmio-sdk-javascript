@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -52,11 +52,11 @@
    * Constructs a new <code>Pagination</code>.
    * @alias module:Processmaker/Model/Pagination
    * @class
-   * @param total {Number} 
-   * @param count {Number} 
-   * @param perPage {Number} 
-   * @param currentPage {Number} 
-   * @param totalPages {Number} 
+   * @param total {Integer} 
+   * @param count {Integer} 
+   * @param perPage {Integer} 
+   * @param currentPage {Integer} 
+   * @param totalPages {Integer} 
    */
   var exports = function(total, count, perPage, currentPage, totalPages) {
     var _this = this;
@@ -81,19 +81,19 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('total')) {
-        obj['total'] = ApiClient.convertToType(data['total'], 'Number');
+        obj['total'] = ApiClient.convertToType(data['total'], 'Integer');
       }
       if (data.hasOwnProperty('count')) {
-        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+        obj['count'] = ApiClient.convertToType(data['count'], 'Integer');
       }
       if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
+        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
       }
       if (data.hasOwnProperty('current_page')) {
-        obj['current_page'] = ApiClient.convertToType(data['current_page'], 'Number');
+        obj['current_page'] = ApiClient.convertToType(data['current_page'], 'Integer');
       }
       if (data.hasOwnProperty('total_pages')) {
-        obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
+        obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Integer');
       }
       if (data.hasOwnProperty('links')) {
         obj['links'] = PaginationLinks.constructFromObject(data['links']);
@@ -103,23 +103,23 @@
   }
 
   /**
-   * @member {Number} total
+   * @member {Integer} total
    */
   exports.prototype['total'] = undefined;
   /**
-   * @member {Number} count
+   * @member {Integer} count
    */
   exports.prototype['count'] = undefined;
   /**
-   * @member {Number} per_page
+   * @member {Integer} per_page
    */
   exports.prototype['per_page'] = undefined;
   /**
-   * @member {Number} current_page
+   * @member {Integer} current_page
    */
   exports.prototype['current_page'] = undefined;
   /**
-   * @member {Number} total_pages
+   * @member {Integer} total_pages
    */
   exports.prototype['total_pages'] = undefined;
   /**

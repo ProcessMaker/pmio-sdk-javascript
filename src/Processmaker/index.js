@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -25,16 +25,16 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/BpmnFile', 'Processmaker/Model/BpmnFileAttributes', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/Client', 'Processmaker/Model/ClientAttributes', 'Processmaker/Model/ClientCollection', 'Processmaker/Model/ClientCreateItem', 'Processmaker/Model/ClientItem', 'Processmaker/Model/ClientUpdateItem', 'Processmaker/Model/DataModel', 'Processmaker/Model/DataModelAttributes', 'Processmaker/Model/DataModelItem', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/DataModelItemAttributes', 'Processmaker/Model/Error', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/Event', 'Processmaker/Model/EventAttributes', 'Processmaker/Model/EventCollection', 'Processmaker/Model/EventConnector', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorAttributes', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/Flow', 'Processmaker/Model/FlowAttributes', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/Gateway', 'Processmaker/Model/GatewayAttributes', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/Group', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/GroupAttributes', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupIds', 'Processmaker/Model/GroupItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/InputOutput', 'Processmaker/Model/InputOutputAttributes', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/Instance', 'Processmaker/Model/InstanceAttributes', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/Meta', 'Processmaker/Model/MetaLog', 'Processmaker/Model/Pagination', 'Processmaker/Model/PaginationLinks', 'Processmaker/Model/Process', 'Processmaker/Model/ProcessAttributes', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/ResultSuccessMeta', 'Processmaker/Model/Task', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/TaskAttributes', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TaskConnector', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/TaskConnectorAttributes', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskInstance', 'Processmaker/Model/TaskInstanceAttributes', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/User', 'Processmaker/Model/UserAttributes', 'Processmaker/Model/UserCollection', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/UserIds', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserUpdateItem', 'Processmaker/PMIO/ProcessmakerApi'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/BpmnFile', 'Processmaker/Model/BpmnFileAttributes', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/DataModel', 'Processmaker/Model/DataModelAttributes', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/DataModelItem', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/DataModelItemAttributes', 'Processmaker/Model/Error', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/Event', 'Processmaker/Model/EventAttributes', 'Processmaker/Model/EventCollection', 'Processmaker/Model/EventConnector', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorAttributes', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/Flow', 'Processmaker/Model/FlowAttributes', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/Gateway', 'Processmaker/Model/GatewayAttributes', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/Group', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/GroupAttributes', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupIds', 'Processmaker/Model/GroupItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/InputOutput', 'Processmaker/Model/InputOutputAttributes', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/Instance', 'Processmaker/Model/InstanceAttributes', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/Meta', 'Processmaker/Model/MetaLog', 'Processmaker/Model/OauthClient', 'Processmaker/Model/OauthClientAttributes', 'Processmaker/Model/OauthClientCollection', 'Processmaker/Model/OauthClientCreateItem', 'Processmaker/Model/OauthClientItem', 'Processmaker/Model/OauthClientUpdateItem', 'Processmaker/Model/Pagination', 'Processmaker/Model/PaginationLinks', 'Processmaker/Model/Process', 'Processmaker/Model/ProcessAttributes', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/ResultSuccessMeta', 'Processmaker/Model/Task', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/TaskAttributes', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TaskConnector', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/TaskConnectorAttributes', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskInstance', 'Processmaker/Model/TaskInstanceAttributes', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/Token', 'Processmaker/Model/TokenAttributes', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/User', 'Processmaker/Model/UserAttributes', 'Processmaker/Model/UserCollection', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/UserIds', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserUpdateItem', 'Processmaker/PMIO/Client', 'Processmaker/PMIO/Event', 'Processmaker/PMIO/Flow', 'Processmaker/PMIO/Gateway', 'Processmaker/PMIO/Groups', 'Processmaker/PMIO/Inputoutput', 'Processmaker/PMIO/Oauth', 'Processmaker/PMIO/Process', 'Processmaker/PMIO/ProcessInstance', 'Processmaker/PMIO/Task', 'Processmaker/PMIO/Users'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./Model/BpmnFile'), require('./Model/BpmnFileAttributes'), require('./Model/BpmnImportItem'), require('./Model/Client'), require('./Model/ClientAttributes'), require('./Model/ClientCollection'), require('./Model/ClientCreateItem'), require('./Model/ClientItem'), require('./Model/ClientUpdateItem'), require('./Model/DataModel'), require('./Model/DataModelAttributes'), require('./Model/DataModelItem'), require('./Model/DataModelItem1'), require('./Model/DataModelItemAttributes'), require('./Model/Error'), require('./Model/ErrorArray'), require('./Model/Event'), require('./Model/EventAttributes'), require('./Model/EventCollection'), require('./Model/EventConnector'), require('./Model/EventConnector1'), require('./Model/EventConnectorAttributes'), require('./Model/EventConnectorCreateItem'), require('./Model/EventConnectorUpdateItem'), require('./Model/EventConnectorsCollection'), require('./Model/EventCreateItem'), require('./Model/EventItem'), require('./Model/EventUpdateItem'), require('./Model/Flow'), require('./Model/FlowAttributes'), require('./Model/FlowCollection'), require('./Model/FlowCreateItem'), require('./Model/FlowItem'), require('./Model/FlowUpdateItem'), require('./Model/Gateway'), require('./Model/GatewayAttributes'), require('./Model/GatewayCollection'), require('./Model/GatewayCreateItem'), require('./Model/GatewayItem'), require('./Model/GatewayUpdateItem'), require('./Model/Group'), require('./Model/GroupAddUsersItem'), require('./Model/GroupAttributes'), require('./Model/GroupCollection'), require('./Model/GroupCreateItem'), require('./Model/GroupIds'), require('./Model/GroupItem'), require('./Model/GroupRemoveUsersItem'), require('./Model/GroupSyncUsersItem'), require('./Model/GroupUpdateItem'), require('./Model/InlineResponse200'), require('./Model/InputOutput'), require('./Model/InputOutputAttributes'), require('./Model/InputOutputCollection'), require('./Model/InputOutputCreateItem'), require('./Model/InputOutputItem'), require('./Model/InputOutputUpdateItem'), require('./Model/Instance'), require('./Model/InstanceAttributes'), require('./Model/InstanceCollection'), require('./Model/InstanceCreateItem'), require('./Model/InstanceItem'), require('./Model/InstanceUpdateItem'), require('./Model/Meta'), require('./Model/MetaLog'), require('./Model/Pagination'), require('./Model/PaginationLinks'), require('./Model/Process'), require('./Model/ProcessAttributes'), require('./Model/ProcessCollection'), require('./Model/ProcessCollection1'), require('./Model/ProcessCreateItem'), require('./Model/ProcessItem'), require('./Model/ProcessUpdateItem'), require('./Model/ResultSuccess'), require('./Model/ResultSuccessMeta'), require('./Model/Task'), require('./Model/TaskAddGroupsItem'), require('./Model/TaskAttributes'), require('./Model/TaskCollection'), require('./Model/TaskConnector'), require('./Model/TaskConnector1'), require('./Model/TaskConnectorAttributes'), require('./Model/TaskConnectorCreateItem'), require('./Model/TaskConnectorUpdateItem'), require('./Model/TaskConnectorsCollection'), require('./Model/TaskCreateItem'), require('./Model/TaskInstance'), require('./Model/TaskInstanceAttributes'), require('./Model/TaskInstanceCollection'), require('./Model/TaskInstanceUpdateItem'), require('./Model/TaskItem'), require('./Model/TaskRemoveGroupsItem'), require('./Model/TaskSyncGroupsItem'), require('./Model/TaskUpdateItem'), require('./Model/TriggerEventCreateItem'), require('./Model/User'), require('./Model/UserAttributes'), require('./Model/UserCollection'), require('./Model/UserCreateItem'), require('./Model/UserIds'), require('./Model/UserItem'), require('./Model/UserUpdateItem'), require('./PMIO/ProcessmakerApi'));
+    module.exports = factory(require('./ApiClient'), require('./Model/BpmnFile'), require('./Model/BpmnFileAttributes'), require('./Model/BpmnImportItem'), require('./Model/DataModel'), require('./Model/DataModelAttributes'), require('./Model/DataModelCollection'), require('./Model/DataModelItem'), require('./Model/DataModelItem1'), require('./Model/DataModelItemAttributes'), require('./Model/Error'), require('./Model/ErrorArray'), require('./Model/Event'), require('./Model/EventAttributes'), require('./Model/EventCollection'), require('./Model/EventConnector'), require('./Model/EventConnector1'), require('./Model/EventConnectorAttributes'), require('./Model/EventConnectorCreateItem'), require('./Model/EventConnectorUpdateItem'), require('./Model/EventConnectorsCollection'), require('./Model/EventCreateItem'), require('./Model/EventItem'), require('./Model/EventUpdateItem'), require('./Model/Flow'), require('./Model/FlowAttributes'), require('./Model/FlowCollection'), require('./Model/FlowCreateItem'), require('./Model/FlowItem'), require('./Model/FlowUpdateItem'), require('./Model/Gateway'), require('./Model/GatewayAttributes'), require('./Model/GatewayCollection'), require('./Model/GatewayCreateItem'), require('./Model/GatewayItem'), require('./Model/GatewayUpdateItem'), require('./Model/Group'), require('./Model/GroupAddUsersItem'), require('./Model/GroupAttributes'), require('./Model/GroupCollection'), require('./Model/GroupCreateItem'), require('./Model/GroupIds'), require('./Model/GroupItem'), require('./Model/GroupRemoveUsersItem'), require('./Model/GroupSyncUsersItem'), require('./Model/GroupUpdateItem'), require('./Model/InlineResponse200'), require('./Model/InputOutput'), require('./Model/InputOutputAttributes'), require('./Model/InputOutputCollection'), require('./Model/InputOutputCreateItem'), require('./Model/InputOutputItem'), require('./Model/InputOutputUpdateItem'), require('./Model/Instance'), require('./Model/InstanceAttributes'), require('./Model/InstanceCollection'), require('./Model/InstanceCreateItem'), require('./Model/InstanceItem'), require('./Model/InstanceUpdateItem'), require('./Model/Meta'), require('./Model/MetaLog'), require('./Model/OauthClient'), require('./Model/OauthClientAttributes'), require('./Model/OauthClientCollection'), require('./Model/OauthClientCreateItem'), require('./Model/OauthClientItem'), require('./Model/OauthClientUpdateItem'), require('./Model/Pagination'), require('./Model/PaginationLinks'), require('./Model/Process'), require('./Model/ProcessAttributes'), require('./Model/ProcessCollection'), require('./Model/ProcessCollection1'), require('./Model/ProcessCreateItem'), require('./Model/ProcessItem'), require('./Model/ProcessUpdateItem'), require('./Model/ResultSuccess'), require('./Model/ResultSuccessMeta'), require('./Model/Task'), require('./Model/TaskAddGroupsItem'), require('./Model/TaskAttributes'), require('./Model/TaskCollection'), require('./Model/TaskConnector'), require('./Model/TaskConnector1'), require('./Model/TaskConnectorAttributes'), require('./Model/TaskConnectorCreateItem'), require('./Model/TaskConnectorUpdateItem'), require('./Model/TaskConnectorsCollection'), require('./Model/TaskCreateItem'), require('./Model/TaskInstance'), require('./Model/TaskInstanceAttributes'), require('./Model/TaskInstanceCollection'), require('./Model/TaskInstanceUpdateItem'), require('./Model/TaskItem'), require('./Model/TaskRemoveGroupsItem'), require('./Model/TaskSyncGroupsItem'), require('./Model/TaskUpdateItem'), require('./Model/Token'), require('./Model/TokenAttributes'), require('./Model/TokenCollection'), require('./Model/TriggerEventCreateItem'), require('./Model/User'), require('./Model/UserAttributes'), require('./Model/UserCollection'), require('./Model/UserCreateItem'), require('./Model/UserIds'), require('./Model/UserItem'), require('./Model/UserUpdateItem'), require('./PMIO/Client'), require('./PMIO/Event'), require('./PMIO/Flow'), require('./PMIO/Gateway'), require('./PMIO/Groups'), require('./PMIO/Inputoutput'), require('./PMIO/Oauth'), require('./PMIO/Process'), require('./PMIO/ProcessInstance'), require('./PMIO/Task'), require('./PMIO/Users'));
   }
-}(function(ApiClient, BpmnFile, BpmnFileAttributes, BpmnImportItem, Client, ClientAttributes, ClientCollection, ClientCreateItem, ClientItem, ClientUpdateItem, DataModel, DataModelAttributes, DataModelItem, DataModelItem1, DataModelItemAttributes, Error, ErrorArray, Event, EventAttributes, EventCollection, EventConnector, EventConnector1, EventConnectorAttributes, EventConnectorCreateItem, EventConnectorUpdateItem, EventConnectorsCollection, EventCreateItem, EventItem, EventUpdateItem, Flow, FlowAttributes, FlowCollection, FlowCreateItem, FlowItem, FlowUpdateItem, Gateway, GatewayAttributes, GatewayCollection, GatewayCreateItem, GatewayItem, GatewayUpdateItem, Group, GroupAddUsersItem, GroupAttributes, GroupCollection, GroupCreateItem, GroupIds, GroupItem, GroupRemoveUsersItem, GroupSyncUsersItem, GroupUpdateItem, InlineResponse200, InputOutput, InputOutputAttributes, InputOutputCollection, InputOutputCreateItem, InputOutputItem, InputOutputUpdateItem, Instance, InstanceAttributes, InstanceCollection, InstanceCreateItem, InstanceItem, InstanceUpdateItem, Meta, MetaLog, Pagination, PaginationLinks, Process, ProcessAttributes, ProcessCollection, ProcessCollection1, ProcessCreateItem, ProcessItem, ProcessUpdateItem, ResultSuccess, ResultSuccessMeta, Task, TaskAddGroupsItem, TaskAttributes, TaskCollection, TaskConnector, TaskConnector1, TaskConnectorAttributes, TaskConnectorCreateItem, TaskConnectorUpdateItem, TaskConnectorsCollection, TaskCreateItem, TaskInstance, TaskInstanceAttributes, TaskInstanceCollection, TaskInstanceUpdateItem, TaskItem, TaskRemoveGroupsItem, TaskSyncGroupsItem, TaskUpdateItem, TriggerEventCreateItem, User, UserAttributes, UserCollection, UserCreateItem, UserIds, UserItem, UserUpdateItem, ProcessmakerApi) {
+}(function(ApiClient, BpmnFile, BpmnFileAttributes, BpmnImportItem, DataModel, DataModelAttributes, DataModelCollection, DataModelItem, DataModelItem1, DataModelItemAttributes, Error, ErrorArray, Event, EventAttributes, EventCollection, EventConnector, EventConnector1, EventConnectorAttributes, EventConnectorCreateItem, EventConnectorUpdateItem, EventConnectorsCollection, EventCreateItem, EventItem, EventUpdateItem, Flow, FlowAttributes, FlowCollection, FlowCreateItem, FlowItem, FlowUpdateItem, Gateway, GatewayAttributes, GatewayCollection, GatewayCreateItem, GatewayItem, GatewayUpdateItem, Group, GroupAddUsersItem, GroupAttributes, GroupCollection, GroupCreateItem, GroupIds, GroupItem, GroupRemoveUsersItem, GroupSyncUsersItem, GroupUpdateItem, InlineResponse200, InputOutput, InputOutputAttributes, InputOutputCollection, InputOutputCreateItem, InputOutputItem, InputOutputUpdateItem, Instance, InstanceAttributes, InstanceCollection, InstanceCreateItem, InstanceItem, InstanceUpdateItem, Meta, MetaLog, OauthClient, OauthClientAttributes, OauthClientCollection, OauthClientCreateItem, OauthClientItem, OauthClientUpdateItem, Pagination, PaginationLinks, Process, ProcessAttributes, ProcessCollection, ProcessCollection1, ProcessCreateItem, ProcessItem, ProcessUpdateItem, ResultSuccess, ResultSuccessMeta, Task, TaskAddGroupsItem, TaskAttributes, TaskCollection, TaskConnector, TaskConnector1, TaskConnectorAttributes, TaskConnectorCreateItem, TaskConnectorUpdateItem, TaskConnectorsCollection, TaskCreateItem, TaskInstance, TaskInstanceAttributes, TaskInstanceCollection, TaskInstanceUpdateItem, TaskItem, TaskRemoveGroupsItem, TaskSyncGroupsItem, TaskUpdateItem, Token, TokenAttributes, TokenCollection, TriggerEventCreateItem, User, UserAttributes, UserCollection, UserCreateItem, UserIds, UserItem, UserUpdateItem, Client, Event, Flow, Gateway, Groups, Inputoutput, Oauth, Process, ProcessInstance, Task, Users) {
   'use strict';
 
   /**
-   * This_ProcessMaker_IO_API_provides_access_to_a_BPMN_2_0_compliant_workflow_engine_api_that_is_designed_to_be_used_as_a_microservice_to_support_enterprise_cloud_applications_The_current_Alpha_1_0_version_supports_most_of_the_descriptive_class_of_the_BPMN_2_0_specification_.<br>
+   * This_ProcessMaker_IO_API_provides_access_to_a_BPMN_2_0_compliant_workflow_engine_API_that_is_designed_to_be_used_as_a_microservice_to_support_enterprise_cloud_applications_The_current_Alpha_1_0_version_supports_most_of_the_descriptive_classes_of_the_BPMN_2_0_specification_.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -86,36 +86,6 @@
      */
     BpmnImportItem: BpmnImportItem,
     /**
-     * The Client model constructor.
-     * @property {module:Processmaker/Model/Client}
-     */
-    Client: Client,
-    /**
-     * The ClientAttributes model constructor.
-     * @property {module:Processmaker/Model/ClientAttributes}
-     */
-    ClientAttributes: ClientAttributes,
-    /**
-     * The ClientCollection model constructor.
-     * @property {module:Processmaker/Model/ClientCollection}
-     */
-    ClientCollection: ClientCollection,
-    /**
-     * The ClientCreateItem model constructor.
-     * @property {module:Processmaker/Model/ClientCreateItem}
-     */
-    ClientCreateItem: ClientCreateItem,
-    /**
-     * The ClientItem model constructor.
-     * @property {module:Processmaker/Model/ClientItem}
-     */
-    ClientItem: ClientItem,
-    /**
-     * The ClientUpdateItem model constructor.
-     * @property {module:Processmaker/Model/ClientUpdateItem}
-     */
-    ClientUpdateItem: ClientUpdateItem,
-    /**
      * The DataModel model constructor.
      * @property {module:Processmaker/Model/DataModel}
      */
@@ -125,6 +95,11 @@
      * @property {module:Processmaker/Model/DataModelAttributes}
      */
     DataModelAttributes: DataModelAttributes,
+    /**
+     * The DataModelCollection model constructor.
+     * @property {module:Processmaker/Model/DataModelCollection}
+     */
+    DataModelCollection: DataModelCollection,
     /**
      * The DataModelItem model constructor.
      * @property {module:Processmaker/Model/DataModelItem}
@@ -396,6 +371,36 @@
      */
     MetaLog: MetaLog,
     /**
+     * The OauthClient model constructor.
+     * @property {module:Processmaker/Model/OauthClient}
+     */
+    OauthClient: OauthClient,
+    /**
+     * The OauthClientAttributes model constructor.
+     * @property {module:Processmaker/Model/OauthClientAttributes}
+     */
+    OauthClientAttributes: OauthClientAttributes,
+    /**
+     * The OauthClientCollection model constructor.
+     * @property {module:Processmaker/Model/OauthClientCollection}
+     */
+    OauthClientCollection: OauthClientCollection,
+    /**
+     * The OauthClientCreateItem model constructor.
+     * @property {module:Processmaker/Model/OauthClientCreateItem}
+     */
+    OauthClientCreateItem: OauthClientCreateItem,
+    /**
+     * The OauthClientItem model constructor.
+     * @property {module:Processmaker/Model/OauthClientItem}
+     */
+    OauthClientItem: OauthClientItem,
+    /**
+     * The OauthClientUpdateItem model constructor.
+     * @property {module:Processmaker/Model/OauthClientUpdateItem}
+     */
+    OauthClientUpdateItem: OauthClientUpdateItem,
+    /**
      * The Pagination model constructor.
      * @property {module:Processmaker/Model/Pagination}
      */
@@ -546,6 +551,21 @@
      */
     TaskUpdateItem: TaskUpdateItem,
     /**
+     * The Token model constructor.
+     * @property {module:Processmaker/Model/Token}
+     */
+    Token: Token,
+    /**
+     * The TokenAttributes model constructor.
+     * @property {module:Processmaker/Model/TokenAttributes}
+     */
+    TokenAttributes: TokenAttributes,
+    /**
+     * The TokenCollection model constructor.
+     * @property {module:Processmaker/Model/TokenCollection}
+     */
+    TokenCollection: TokenCollection,
+    /**
      * The TriggerEventCreateItem model constructor.
      * @property {module:Processmaker/Model/TriggerEventCreateItem}
      */
@@ -586,10 +606,60 @@
      */
     UserUpdateItem: UserUpdateItem,
     /**
-     * The ProcessmakerApi service constructor.
-     * @property {module:Processmaker/PMIO/ProcessmakerApi}
+     * The Client service constructor.
+     * @property {module:Processmaker/PMIO/Client}
      */
-    ProcessmakerApi: ProcessmakerApi
+    Client: Client,
+    /**
+     * The Event service constructor.
+     * @property {module:Processmaker/PMIO/Event}
+     */
+    Event: Event,
+    /**
+     * The Flow service constructor.
+     * @property {module:Processmaker/PMIO/Flow}
+     */
+    Flow: Flow,
+    /**
+     * The Gateway service constructor.
+     * @property {module:Processmaker/PMIO/Gateway}
+     */
+    Gateway: Gateway,
+    /**
+     * The Groups service constructor.
+     * @property {module:Processmaker/PMIO/Groups}
+     */
+    Groups: Groups,
+    /**
+     * The Inputoutput service constructor.
+     * @property {module:Processmaker/PMIO/Inputoutput}
+     */
+    Inputoutput: Inputoutput,
+    /**
+     * The Oauth service constructor.
+     * @property {module:Processmaker/PMIO/Oauth}
+     */
+    Oauth: Oauth,
+    /**
+     * The Process service constructor.
+     * @property {module:Processmaker/PMIO/Process}
+     */
+    Process: Process,
+    /**
+     * The ProcessInstance service constructor.
+     * @property {module:Processmaker/PMIO/ProcessInstance}
+     */
+    ProcessInstance: ProcessInstance,
+    /**
+     * The Task service constructor.
+     * @property {module:Processmaker/PMIO/Task}
+     */
+    Task: Task,
+    /**
+     * The Users service constructor.
+     * @property {module:Processmaker/PMIO/Users}
+     */
+    Users: Users
   };
 
   return exports;

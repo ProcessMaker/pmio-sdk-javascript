@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eventId** | **Number** |  | [optional] 
+**eventId** | **Integer** |  | [optional] 
 **connectorClass** | **String** |  | [optional] [default to &#39;CorrelationKeys&#39;]
 **inputParameters** | **String** |  | [optional] [default to &#39;[]&#39;]
 **outputParameters** | **String** |  | [optional] [default to &#39;[]&#39;]

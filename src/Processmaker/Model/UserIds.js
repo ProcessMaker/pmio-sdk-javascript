@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -52,7 +52,7 @@
    * Constructs a new <code>UserIds</code>.
    * @alias module:Processmaker/Model/UserIds
    * @class
-   * @param users {Array.<String>} User ID's array
+   * @param users {Array.<String>} User IDs array
    */
   var exports = function(users) {
     var _this = this;
@@ -79,7 +79,7 @@
   }
 
   /**
-   * User ID's array
+   * User IDs array
    * @member {Array.<String>} users
    */
   exports.prototype['users'] = undefined;

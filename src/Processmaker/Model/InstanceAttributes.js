@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -52,14 +52,11 @@
    * Constructs a new <code>InstanceAttributes</code>.
    * @alias module:Processmaker/Model/InstanceAttributes
    * @class
-   * @param name {String} 
    * @param processId {String} 
    * @param status {module:Processmaker/Model/InstanceAttributes.StatusEnum} 
    */
-  var exports = function(name, processId, status) {
+  var exports = function(processId, status) {
     var _this = this;
-
-    _this['name'] = name;
 
     _this['process_id'] = processId;
 
@@ -82,12 +79,6 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('description')) {
-        obj['description'] = ApiClient.convertToType(data['description'], 'String');
-      }
       if (data.hasOwnProperty('process_id')) {
         obj['process_id'] = ApiClient.convertToType(data['process_id'], 'String');
       }
@@ -101,7 +92,7 @@
         obj['pin'] = ApiClient.convertToType(data['pin'], 'String');
       }
       if (data.hasOwnProperty('duration')) {
-        obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
+        obj['duration'] = ApiClient.convertToType(data['duration'], 'Integer');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -116,14 +107,6 @@
     return obj;
   }
 
-  /**
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * @member {String} description
-   */
-  exports.prototype['description'] = undefined;
   /**
    * @member {String} process_id
    */
@@ -141,7 +124,7 @@
    */
   exports.prototype['pin'] = undefined;
   /**
-   * @member {Number} duration
+   * @member {Integer} duration
    */
   exports.prototype['duration'] = undefined;
   /**

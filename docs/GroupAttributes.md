@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | 
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] [default to &#39;ACTIVE&#39;]
-**users** | **[String]** | User ID&#39;s array | [optional] 
+**users** | **[String]** | User IDs array | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 

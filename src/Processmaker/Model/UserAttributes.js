@@ -1,6 +1,6 @@
 /**
  * ProcessMaker API
- * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine api that is designed to be used as a microservice to support enterprise cloud applications.  The current Alpha 1.0 version supports most of the descriptive class of the BPMN 2.0 specification.
+ * This ProcessMaker I/O API provides access to a BPMN 2.0 compliant workflow engine API that is designed to be used as a microservice to support enterprise cloud applications. The current Alpha 1.0 version supports most of the descriptive classes of the BPMN 2.0 specification.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: support@processmaker.io
@@ -168,7 +168,7 @@
         obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'String');
       }
       if (data.hasOwnProperty('clients')) {
-        obj['clients'] = ApiClient.convertToType(data['clients'], ['Number']);
+        obj['clients'] = ApiClient.convertToType(data['clients'], ['Integer']);
       }
     }
     return obj;
@@ -269,7 +269,7 @@
    */
   exports.prototype['updated_at'] = undefined;
   /**
-   * @member {Array.<Number>} clients
+   * @member {Array.<Integer>} clients
    */
   exports.prototype['clients'] = undefined;
 
