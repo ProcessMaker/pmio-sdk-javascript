@@ -54,25 +54,16 @@
    * @class
    * @param name {String} 
    * @param status {module:Processmaker/Model/ProcessAttributes.StatusEnum} 
-   * @param durationBy {module:Processmaker/Model/ProcessAttributes.DurationByEnum} 
    * @param type {module:Processmaker/Model/ProcessAttributes.TypeEnum} 
-   * @param designAccess {module:Processmaker/Model/ProcessAttributes.DesignAccessEnum} 
    */
-  var exports = function(name, status, durationBy, type, designAccess) {
+  var exports = function(name, status, type) {
     var _this = this;
 
     _this['name'] = name;
 
 
     _this['status'] = status;
-    _this['duration_by'] = durationBy;
     _this['type'] = type;
-
-    _this['design_access'] = designAccess;
-
-
-
-
 
 
 
@@ -105,29 +96,11 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
-      if (data.hasOwnProperty('duration_by')) {
-        obj['duration_by'] = ApiClient.convertToType(data['duration_by'], 'String');
-      }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
       if (data.hasOwnProperty('assignment')) {
         obj['assignment'] = ApiClient.convertToType(data['assignment'], 'Boolean');
-      }
-      if (data.hasOwnProperty('design_access')) {
-        obj['design_access'] = ApiClient.convertToType(data['design_access'], 'String');
-      }
-      if (data.hasOwnProperty('show_map')) {
-        obj['show_map'] = ApiClient.convertToType(data['show_map'], 'Boolean');
-      }
-      if (data.hasOwnProperty('show_message')) {
-        obj['show_message'] = ApiClient.convertToType(data['show_message'], 'Boolean');
-      }
-      if (data.hasOwnProperty('show_delegate')) {
-        obj['show_delegate'] = ApiClient.convertToType(data['show_delegate'], 'Boolean');
-      }
-      if (data.hasOwnProperty('show_dynaform')) {
-        obj['show_dynaform'] = ApiClient.convertToType(data['show_dynaform'], 'Boolean');
       }
       if (data.hasOwnProperty('category_id')) {
         obj['category_id'] = ApiClient.convertToType(data['category_id'], 'String');
@@ -140,9 +113,6 @@
       }
       if (data.hasOwnProperty('debug')) {
         obj['debug'] = ApiClient.convertToType(data['debug'], 'Boolean');
-      }
-      if (data.hasOwnProperty('dynaform_summary_id')) {
-        obj['dynaform_summary_id'] = ApiClient.convertToType(data['dynaform_summary_id'], 'String');
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -172,11 +142,6 @@
    */
   exports.prototype['status'] = 'ACTIVE';
   /**
-   * @member {module:Processmaker/Model/ProcessAttributes.DurationByEnum} duration_by
-   * @default 'WORKING_DAYS'
-   */
-  exports.prototype['duration_by'] = 'WORKING_DAYS';
-  /**
    * @member {module:Processmaker/Model/ProcessAttributes.TypeEnum} type
    * @default 'NORMAL'
    */
@@ -186,31 +151,6 @@
    * @default false
    */
   exports.prototype['assignment'] = false;
-  /**
-   * @member {module:Processmaker/Model/ProcessAttributes.DesignAccessEnum} design_access
-   * @default 'PUBLIC'
-   */
-  exports.prototype['design_access'] = 'PUBLIC';
-  /**
-   * @member {Boolean} show_map
-   * @default true
-   */
-  exports.prototype['show_map'] = true;
-  /**
-   * @member {Boolean} show_message
-   * @default true
-   */
-  exports.prototype['show_message'] = true;
-  /**
-   * @member {Boolean} show_delegate
-   * @default true
-   */
-  exports.prototype['show_delegate'] = true;
-  /**
-   * @member {Boolean} show_dynaform
-   * @default false
-   */
-  exports.prototype['show_dynaform'] = false;
   /**
    * @member {String} category_id
    */
@@ -228,10 +168,6 @@
    * @default false
    */
   exports.prototype['debug'] = false;
-  /**
-   * @member {String} dynaform_summary_id
-   */
-  exports.prototype['dynaform_summary_id'] = undefined;
   /**
    * @member {String} created_at
    */
@@ -265,23 +201,6 @@
     "DISABLED": "DISABLED"  };
 
   /**
-   * Allowed values for the <code>duration_by</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.DurationByEnum = {
-    /**
-     * value: "WORKING_DAYS"
-     * @const
-     */
-    "WORKING_DAYS": "WORKING_DAYS",
-    /**
-     * value: "CALENDAR_DAYS"
-     * @const
-     */
-    "CALENDAR_DAYS": "CALENDAR_DAYS"  };
-
-  /**
    * Allowed values for the <code>type</code> property.
    * @enum {String}
    * @readonly
@@ -297,23 +216,6 @@
      * @const
      */
     "SUB_PROCESS": "SUB_PROCESS"  };
-
-  /**
-   * Allowed values for the <code>design_access</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.DesignAccessEnum = {
-    /**
-     * value: "PUBLIC"
-     * @const
-     */
-    "PUBLIC": "PUBLIC",
-    /**
-     * value: "PRIVATE"
-     * @const
-     */
-    "PRIVATE": "PRIVATE"  };
 
 
   return exports;

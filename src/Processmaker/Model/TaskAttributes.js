@@ -56,15 +56,8 @@
    * @param processId {String} 
    * @param type {module:Processmaker/Model/TaskAttributes.TypeEnum} 
    * @param assignType {module:Processmaker/Model/TaskAttributes.AssignTypeEnum} 
-   * @param transferFly {Boolean} 
-   * @param canUpload {Boolean} 
-   * @param viewUpload {Boolean} 
-   * @param viewAdditionalDocumentation {Boolean} 
-   * @param start {Boolean} 
-   * @param sendLastEmail {Boolean} 
-   * @param selfserviceTimeout {Integer} 
    */
-  var exports = function(name, processId, type, assignType, transferFly, canUpload, viewUpload, viewAdditionalDocumentation, start, sendLastEmail, selfserviceTimeout) {
+  var exports = function(name, processId, type, assignType) {
     var _this = this;
 
     _this['name'] = name;
@@ -72,22 +65,6 @@
     _this['process_id'] = processId;
     _this['type'] = type;
     _this['assign_type'] = assignType;
-
-
-
-
-
-    _this['transfer_fly'] = transferFly;
-    _this['can_upload'] = canUpload;
-    _this['view_upload'] = viewUpload;
-    _this['view_additional_documentation'] = viewAdditionalDocumentation;
-    _this['start'] = start;
-    _this['send_last_email'] = sendLastEmail;
-
-    _this['selfservice_timeout'] = selfserviceTimeout;
-
-
-
 
 
 
@@ -119,54 +96,6 @@
       }
       if (data.hasOwnProperty('assign_type')) {
         obj['assign_type'] = ApiClient.convertToType(data['assign_type'], 'String');
-      }
-      if (data.hasOwnProperty('priority_variable')) {
-        obj['priority_variable'] = ApiClient.convertToType(data['priority_variable'], 'String');
-      }
-      if (data.hasOwnProperty('assign_variable')) {
-        obj['assign_variable'] = ApiClient.convertToType(data['assign_variable'], 'String');
-      }
-      if (data.hasOwnProperty('group_variable')) {
-        obj['group_variable'] = ApiClient.convertToType(data['group_variable'], 'String');
-      }
-      if (data.hasOwnProperty('mi_instance_variable')) {
-        obj['mi_instance_variable'] = ApiClient.convertToType(data['mi_instance_variable'], 'String');
-      }
-      if (data.hasOwnProperty('mi_complete_variable')) {
-        obj['mi_complete_variable'] = ApiClient.convertToType(data['mi_complete_variable'], 'String');
-      }
-      if (data.hasOwnProperty('transfer_fly')) {
-        obj['transfer_fly'] = ApiClient.convertToType(data['transfer_fly'], 'Boolean');
-      }
-      if (data.hasOwnProperty('can_upload')) {
-        obj['can_upload'] = ApiClient.convertToType(data['can_upload'], 'Boolean');
-      }
-      if (data.hasOwnProperty('view_upload')) {
-        obj['view_upload'] = ApiClient.convertToType(data['view_upload'], 'Boolean');
-      }
-      if (data.hasOwnProperty('view_additional_documentation')) {
-        obj['view_additional_documentation'] = ApiClient.convertToType(data['view_additional_documentation'], 'Boolean');
-      }
-      if (data.hasOwnProperty('start')) {
-        obj['start'] = ApiClient.convertToType(data['start'], 'Boolean');
-      }
-      if (data.hasOwnProperty('send_last_email')) {
-        obj['send_last_email'] = ApiClient.convertToType(data['send_last_email'], 'Boolean');
-      }
-      if (data.hasOwnProperty('derivation_screen_tpl')) {
-        obj['derivation_screen_tpl'] = ApiClient.convertToType(data['derivation_screen_tpl'], 'String');
-      }
-      if (data.hasOwnProperty('selfservice_timeout')) {
-        obj['selfservice_timeout'] = ApiClient.convertToType(data['selfservice_timeout'], 'Integer');
-      }
-      if (data.hasOwnProperty('selfservice_time')) {
-        obj['selfservice_time'] = ApiClient.convertToType(data['selfservice_time'], 'String');
-      }
-      if (data.hasOwnProperty('selfservice_time_unit')) {
-        obj['selfservice_time_unit'] = ApiClient.convertToType(data['selfservice_time_unit'], 'String');
-      }
-      if (data.hasOwnProperty('selfservice_execution')) {
-        obj['selfservice_execution'] = ApiClient.convertToType(data['selfservice_execution'], 'String');
       }
       if (data.hasOwnProperty('last_assigned_user_id')) {
         obj['last_assigned_user_id'] = ApiClient.convertToType(data['last_assigned_user_id'], 'String');
@@ -206,76 +135,6 @@
    * @default 'CYCLIC'
    */
   exports.prototype['assign_type'] = 'CYCLIC';
-  /**
-   * @member {String} priority_variable
-   */
-  exports.prototype['priority_variable'] = undefined;
-  /**
-   * @member {String} assign_variable
-   */
-  exports.prototype['assign_variable'] = undefined;
-  /**
-   * @member {String} group_variable
-   */
-  exports.prototype['group_variable'] = undefined;
-  /**
-   * @member {String} mi_instance_variable
-   */
-  exports.prototype['mi_instance_variable'] = undefined;
-  /**
-   * @member {String} mi_complete_variable
-   */
-  exports.prototype['mi_complete_variable'] = undefined;
-  /**
-   * @member {Boolean} transfer_fly
-   * @default false
-   */
-  exports.prototype['transfer_fly'] = false;
-  /**
-   * @member {Boolean} can_upload
-   * @default false
-   */
-  exports.prototype['can_upload'] = false;
-  /**
-   * @member {Boolean} view_upload
-   * @default false
-   */
-  exports.prototype['view_upload'] = false;
-  /**
-   * @member {Boolean} view_additional_documentation
-   * @default false
-   */
-  exports.prototype['view_additional_documentation'] = false;
-  /**
-   * @member {Boolean} start
-   * @default false
-   */
-  exports.prototype['start'] = false;
-  /**
-   * @member {Boolean} send_last_email
-   * @default true
-   */
-  exports.prototype['send_last_email'] = true;
-  /**
-   * @member {String} derivation_screen_tpl
-   */
-  exports.prototype['derivation_screen_tpl'] = undefined;
-  /**
-   * @member {Integer} selfservice_timeout
-   */
-  exports.prototype['selfservice_timeout'] = undefined;
-  /**
-   * @member {String} selfservice_time
-   */
-  exports.prototype['selfservice_time'] = undefined;
-  /**
-   * @member {String} selfservice_time_unit
-   */
-  exports.prototype['selfservice_time_unit'] = undefined;
-  /**
-   * @member {String} selfservice_execution
-   */
-  exports.prototype['selfservice_execution'] = undefined;
   /**
    * @member {String} last_assigned_user_id
    */
