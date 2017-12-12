@@ -242,8 +242,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findGroups operation.
-     * @callback module:Processmaker/PMIO/Groups~findGroupsCallback
+     * Callback function to receive the result of the listGroups operation.
+     * @callback module:Processmaker/PMIO/Groups~listGroupsCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/GroupCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -254,10 +254,10 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Groups~findGroupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Groups~listGroupsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/GroupCollection}
      */
-    this.findGroups = function(opts, callback) {
+    this.listGroups = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

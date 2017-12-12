@@ -132,8 +132,8 @@
       if (data.hasOwnProperty('data')) {
         obj['data'] = ApiClient.convertToType(data['data'], 'String');
       }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('dataModel')) {
+        obj['dataModel'] = ApiClient.convertToType(data['dataModel'], 'String');
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -204,9 +204,9 @@
    */
   exports.prototype['data'] = undefined;
   /**
-   * @member {String} content
+   * @member {String} dataModel
    */
-  exports.prototype['content'] = undefined;
+  exports.prototype['dataModel'] = undefined;
   /**
    * @member {String} created_at
    */

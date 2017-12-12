@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findGateways operation.
-     * @callback module:Processmaker/PMIO/Gateways~findGatewaysCallback
+     * Callback function to receive the result of the listGateways operation.
+     * @callback module:Processmaker/PMIO/Gateways~listGatewaysCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/GatewayCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -225,16 +225,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Gateways~findGatewaysCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Gateways~listGatewaysCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/GatewayCollection}
      */
-    this.findGateways = function(processId, opts, callback) {
+    this.listGateways = function(processId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findGateways";
+        throw "Missing the required parameter 'processId' when calling listGateways";
       }
 
 

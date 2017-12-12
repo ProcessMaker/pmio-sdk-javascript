@@ -67,10 +67,13 @@
     /**
      * This method creates a new user in the system. The client_id will appear in the results.  The &#x60;client_id&#x60; is required to obtain a &#x60;client_secret&#x60; and then you will be able to use it in an Oauth authorization key. Refer to [Oauth Client APIs](#tag/oauth)
      * @param {module:Processmaker/Model/UserCreateItem} userCreateItem JSON API with the User object to add
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.createClient If not empty - a new Oauth Client would be created along with User (default to 1)
      * @param {module:Processmaker/PMIO/Users~addUserCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/UserItem}
      */
-    this.addUser = function(userCreateItem, callback) {
+    this.addUser = function(userCreateItem, opts, callback) {
+      opts = opts || {};
       var postBody = userCreateItem;
 
       // verify the required parameter 'userCreateItem' is set
@@ -82,6 +85,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'create_client': opts['createClient']
       };
       var headerParams = {
       };
@@ -191,8 +195,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findUsers operation.
-     * @callback module:Processmaker/PMIO/Users~findUsersCallback
+     * Callback function to receive the result of the listUsers operation.
+     * @callback module:Processmaker/PMIO/Users~listUsersCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/UserCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -203,10 +207,10 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Users~findUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Users~listUsersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/UserCollection}
      */
-    this.findUsers = function(opts, callback) {
+    this.listUsers = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

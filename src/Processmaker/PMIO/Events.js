@@ -346,12 +346,14 @@
      * This webhook method triggers a given event object.
      * @param {String} processId Process ID related to the event
      * @param {String} eventId ID of the event to trigger
-     * @param {String} triggerBody Freeform JSON structure, it will be passed to the newly created DataModel
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.anyVariable Any POST or GET variable will be passed to the newly created DataModel
      * @param {module:Processmaker/PMIO/Events~eventWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
-    this.eventWebhook = function(processId, eventId, triggerBody, callback) {
-      var postBody = triggerBody;
+    this.eventWebhook = function(processId, eventId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
@@ -363,17 +365,13 @@
         throw "Missing the required parameter 'eventId' when calling eventWebhook";
       }
 
-      // verify the required parameter 'triggerBody' is set
-      if (triggerBody == undefined || triggerBody == null) {
-        throw "Missing the required parameter 'triggerBody' when calling eventWebhook";
-      }
-
 
       var pathParams = {
         'process_id': processId,
         'event_id': eventId
       };
       var queryParams = {
+        'any_variable': opts['anyVariable']
       };
       var headerParams = {
       };
@@ -504,8 +502,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findEventConnectors operation.
-     * @callback module:Processmaker/PMIO/Events~findEventConnectorsCallback
+     * Callback function to receive the result of the listEventConnectors operation.
+     * @callback module:Processmaker/PMIO/Events~listEventConnectorsCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/EventConnectorsCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -518,21 +516,21 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Events~findEventConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Events~listEventConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/EventConnectorsCollection}
      */
-    this.findEventConnectors = function(processId, eventId, opts, callback) {
+    this.listEventConnectors = function(processId, eventId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findEventConnectors";
+        throw "Missing the required parameter 'processId' when calling listEventConnectors";
       }
 
       // verify the required parameter 'eventId' is set
       if (eventId == undefined || eventId == null) {
-        throw "Missing the required parameter 'eventId' when calling findEventConnectors";
+        throw "Missing the required parameter 'eventId' when calling listEventConnectors";
       }
 
 
@@ -562,8 +560,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findEvents operation.
-     * @callback module:Processmaker/PMIO/Events~findEventsCallback
+     * Callback function to receive the result of the listEvents operation.
+     * @callback module:Processmaker/PMIO/Events~listEventsCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/EventCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -575,16 +573,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Events~findEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Events~listEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/EventCollection}
      */
-    this.findEvents = function(processId, opts, callback) {
+    this.listEvents = function(processId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findEvents";
+        throw "Missing the required parameter 'processId' when calling listEvents";
       }
 
 

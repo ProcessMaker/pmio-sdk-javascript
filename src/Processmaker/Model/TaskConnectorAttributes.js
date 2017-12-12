@@ -83,10 +83,10 @@
         obj['connector_class'] = ApiClient.convertToType(data['connector_class'], 'String');
       }
       if (data.hasOwnProperty('input_parameters')) {
-        obj['input_parameters'] = ApiClient.convertToType(data['input_parameters'], 'String');
+        obj['input_parameters'] = ApiClient.convertToType(data['input_parameters'], Object);
       }
       if (data.hasOwnProperty('output_parameters')) {
-        obj['output_parameters'] = ApiClient.convertToType(data['output_parameters'], 'String');
+        obj['output_parameters'] = ApiClient.convertToType(data['output_parameters'], Object);
       }
       if (data.hasOwnProperty('async_before')) {
         obj['async_before'] = ApiClient.convertToType(data['async_before'], 'Boolean');
@@ -111,15 +111,13 @@
    */
   exports.prototype['connector_class'] = 'HttpConnector';
   /**
-   * @member {String} input_parameters
-   * @default '[]'
+   * @member {Object} input_parameters
    */
-  exports.prototype['input_parameters'] = '[]';
+  exports.prototype['input_parameters'] = undefined;
   /**
-   * @member {String} output_parameters
-   * @default '[]'
+   * @member {Object} output_parameters
    */
-  exports.prototype['output_parameters'] = '[]';
+  exports.prototype['output_parameters'] = undefined;
   /**
    * @member {Boolean} async_before
    */

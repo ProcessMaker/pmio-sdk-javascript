@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addOauthClient**](Oauth.md#addOauthClient) | **POST** /users/{user_id}/clients | 
 [**findOauthClientById**](Oauth.md#findOauthClientById) | **GET** /users/{user_id}/clients/{client_id} | 
-[**findOauthClients**](Oauth.md#findOauthClients) | **GET** /users/{user_id}/clients | 
+[**listOauthClients**](Oauth.md#listOauthClients) | **GET** /users/{user_id}/clients | 
 
 
 <a name="addOauthClient"></a>
@@ -117,9 +117,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findOauthClients"></a>
-# **findOauthClients**
-> OauthClientCollection findOauthClients(userId, opts)
+<a name="listOauthClients"></a>
+# **listOauthClients**
+> OauthClientCollection listOauthClients(userId, opts)
 
 
 
@@ -150,7 +150,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.findOauthClients(userId, opts, callback);
+apiInstance.listOauthClients(userId, opts, callback);
 ```
 
 ### Parameters

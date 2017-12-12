@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**addUser**](Users.md#addUser) | **POST** /users | 
 [**deleteUser**](Users.md#deleteUser) | **DELETE** /users/{id} | 
 [**findUserById**](Users.md#findUserById) | **GET** /users/{id} | 
-[**findUsers**](Users.md#findUsers) | **GET** /users | 
+[**listUsers**](Users.md#listUsers) | **GET** /users | 
 [**myselfUser**](Users.md#myselfUser) | **GET** /users/myself | 
 [**updateUser**](Users.md#updateUser) | **PUT** /users/{id} | 
 
 
 <a name="addUser"></a>
 # **addUser**
-> UserItem addUser(userCreateItem)
+> UserItem addUser(userCreateItem, opts)
 
 
 
@@ -33,6 +33,9 @@ var apiInstance = new PMIO.Users();
 
 var userCreateItem = new PMIO.UserCreateItem(); // UserCreateItem | JSON API with the User object to add
 
+var opts = { 
+  'createClient': "1" // String | If not empty - a new Oauth Client would be created along with User
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -41,7 +44,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.addUser(userCreateItem, callback);
+apiInstance.addUser(userCreateItem, opts, callback);
 ```
 
 ### Parameters
@@ -49,6 +52,7 @@ apiInstance.addUser(userCreateItem, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userCreateItem** | [**UserCreateItem**](UserCreateItem.md)| JSON API with the User object to add | 
+ **createClient** | **String**| If not empty - a new Oauth Client would be created along with User | [optional] [default to 1]
 
 ### Return type
 
@@ -165,9 +169,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findUsers"></a>
-# **findUsers**
-> UserCollection findUsers(opts)
+<a name="listUsers"></a>
+# **listUsers**
+> UserCollection listUsers(opts)
 
 
 
@@ -196,7 +200,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.findUsers(opts, callback);
+apiInstance.listUsers(opts, callback);
 ```
 
 ### Parameters

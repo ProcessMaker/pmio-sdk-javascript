@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/InlineResponse2001', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/TaskConnectorsCollection'), require('../Model/InlineResponse200'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/TaskRemoveGroupsItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/InlineResponse2001'), require('../Model/TaskConnectorsCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/TaskRemoveGroupsItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.Tasks = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.TaskConnectorsCollection, root.PMIO.InlineResponse200, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.TaskRemoveGroupsItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem);
+    root.PMIO.Tasks = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.InlineResponse2001, root.PMIO.TaskConnectorsCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.TaskRemoveGroupsItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem);
   }
-}(this, function(ApiClient, ErrorArray, ResultSuccess, TaskAddGroupsItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, TaskConnectorsCollection, InlineResponse200, TaskInstanceCollection, TaskCollection, TaskRemoveGroupsItem, TaskSyncGroupsItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem) {
+}(this, function(ApiClient, ErrorArray, ResultSuccess, TaskAddGroupsItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, InlineResponse2001, TaskConnectorsCollection, TaskInstanceCollection, TaskCollection, TaskRemoveGroupsItem, TaskSyncGroupsItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem) {
   'use strict';
 
   /**
@@ -446,8 +446,59 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskConnectors operation.
-     * @callback module:Processmaker/PMIO/Tasks~findTaskConnectorsCallback
+     * Callback function to receive the result of the findTaskInstanceById operation.
+     * @callback module:Processmaker/PMIO/Tasks~findTaskInstanceByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/InlineResponse2001} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves a task instance based on its ID.
+     * @param {String} taskInstanceId ID of task instance to return
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Tasks~findTaskInstanceByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/InlineResponse2001}
+     */
+    this.findTaskInstanceById = function(taskInstanceId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'taskInstanceId' is set
+      if (taskInstanceId == undefined || taskInstanceId == null) {
+        throw "Missing the required parameter 'taskInstanceId' when calling findTaskInstanceById";
+      }
+
+
+      var pathParams = {
+        'task_instance_id': taskInstanceId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = InlineResponse2001;
+
+      return this.apiClient.callApi(
+        '/task_instances/{task_instance_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskConnectors operation.
+     * @callback module:Processmaker/PMIO/Tasks~listTaskConnectorsCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskConnectorsCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -460,21 +511,21 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Tasks~findTaskConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Tasks~listTaskConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskConnectorsCollection}
      */
-    this.findTaskConnectors = function(processId, taskId, opts, callback) {
+    this.listTaskConnectors = function(processId, taskId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTaskConnectors";
+        throw "Missing the required parameter 'processId' when calling listTaskConnectors";
       }
 
       // verify the required parameter 'taskId' is set
       if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskConnectors";
+        throw "Missing the required parameter 'taskId' when calling listTaskConnectors";
       }
 
 
@@ -504,59 +555,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskInstanceById operation.
-     * @callback module:Processmaker/PMIO/Tasks~findTaskInstanceByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves a task instance based on its ID.
-     * @param {String} taskInstanceId ID of task instance to return
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Tasks~findTaskInstanceByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InlineResponse200}
-     */
-    this.findTaskInstanceById = function(taskInstanceId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'taskInstanceId' is set
-      if (taskInstanceId == undefined || taskInstanceId == null) {
-        throw "Missing the required parameter 'taskInstanceId' when calling findTaskInstanceById";
-      }
-
-
-      var pathParams = {
-        'task_instance_id': taskInstanceId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = InlineResponse200;
-
-      return this.apiClient.callApi(
-        '/task_instances/{task_instance_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTaskInstances operation.
-     * @callback module:Processmaker/PMIO/Tasks~findTaskInstancesCallback
+     * Callback function to receive the result of the listTaskInstances operation.
+     * @callback module:Processmaker/PMIO/Tasks~listTaskInstancesCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -567,10 +567,10 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Tasks~findTaskInstancesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Tasks~listTaskInstancesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
      */
-    this.findTaskInstances = function(opts, callback) {
+    this.listTaskInstances = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -599,8 +599,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTasks operation.
-     * @callback module:Processmaker/PMIO/Tasks~findTasksCallback
+     * Callback function to receive the result of the listTasks operation.
+     * @callback module:Processmaker/PMIO/Tasks~listTasksCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -612,16 +612,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Tasks~findTasksCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Tasks~listTasksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskCollection}
      */
-    this.findTasks = function(processId, opts, callback) {
+    this.listTasks = function(processId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTasks";
+        throw "Missing the required parameter 'processId' when calling listTasks";
       }
 
 
@@ -892,7 +892,7 @@
      * Callback function to receive the result of the updateTaskInstance operation.
      * @callback module:Processmaker/PMIO/Tasks~updateTaskInstanceCallback
      * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InlineResponse200} data The data returned by the service call.
+     * @param {module:Processmaker/Model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -901,7 +901,7 @@
      * @param {String} taskInstanceId ID of the task instance to retrieve
      * @param {module:Processmaker/Model/TaskInstanceUpdateItem} taskInstanceUpdateItem Task instance object to update
      * @param {module:Processmaker/PMIO/Tasks~updateTaskInstanceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InlineResponse200}
+     * data is of type: {@link module:Processmaker/Model/InlineResponse2001}
      */
     this.updateTaskInstance = function(taskInstanceId, taskInstanceUpdateItem, callback) {
       var postBody = taskInstanceUpdateItem;
@@ -930,7 +930,7 @@
       var authNames = ['PasswordGrant'];
       var contentTypes = ['application/vnd.api+json'];
       var accepts = ['application/vnd.api+json'];
-      var returnType = InlineResponse200;
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/task_instances/{task_instance_id}', 'PATCH',

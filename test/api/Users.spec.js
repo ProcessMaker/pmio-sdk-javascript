@@ -89,10 +89,10 @@
         done();
       });
     });
-    describe('findUsers', function() {
-      it('should call findUsers successfully', function(done) {
-        //uncomment below and update the code to test findUsers
-        //instance.findUsers(pet, function(error) {
+    describe('listUsers', function() {
+      it('should call listUsers successfully', function(done) {
+        //uncomment below and update the code to test listUsers
+        //instance.listUsers(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

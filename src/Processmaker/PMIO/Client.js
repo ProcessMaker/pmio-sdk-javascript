@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/EventItem', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/OauthClientCreateItem', 'Processmaker/Model/OauthClientItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCollection', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/OauthClientCollection', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/UserCollection', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/OauthClientUpdateItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/UserUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/EventItem', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/OauthClientCreateItem', 'Processmaker/Model/OauthClientItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/ImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/InlineResponse2001', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCollection', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/ListLogCollection', 'Processmaker/Model/OauthClientCollection', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/UserCollection', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/OauthClientUpdateItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/UserUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/EventItem'), require('../Model/ErrorArray'), require('../Model/EventCreateItem'), require('../Model/EventConnector1'), require('../Model/EventConnectorCreateItem'), require('../Model/FlowCreateItem'), require('../Model/FlowItem'), require('../Model/GatewayItem'), require('../Model/GatewayCreateItem'), require('../Model/GroupCreateItem'), require('../Model/GroupItem'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/InputOutputCreateItem'), require('../Model/InputOutputItem'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/OauthClientCreateItem'), require('../Model/OauthClientItem'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/UserItem'), require('../Model/UserCreateItem'), require('../Model/GroupAddUsersItem'), require('../Model/DataModelItem1'), require('../Model/TriggerEventCreateItem'), require('../Model/DataModelCollection'), require('../Model/EventConnectorsCollection'), require('../Model/EventCollection'), require('../Model/FlowCollection'), require('../Model/GatewayCollection'), require('../Model/GroupCollection'), require('../Model/InputOutputCollection'), require('../Model/InstanceCollection'), require('../Model/OauthClientCollection'), require('../Model/ProcessCollection'), require('../Model/TaskConnectorsCollection'), require('../Model/InlineResponse200'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/TokenCollection'), require('../Model/UserCollection'), require('../Model/BpmnImportItem'), require('../Model/ProcessCollection1'), require('../Model/TaskRemoveGroupsItem'), require('../Model/GroupRemoveUsersItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/GroupSyncUsersItem'), require('../Model/EventUpdateItem'), require('../Model/EventConnectorUpdateItem'), require('../Model/FlowUpdateItem'), require('../Model/GatewayUpdateItem'), require('../Model/GroupUpdateItem'), require('../Model/InputOutputUpdateItem'), require('../Model/InstanceUpdateItem'), require('../Model/OauthClientUpdateItem'), require('../Model/ProcessUpdateItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'), require('../Model/UserUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/EventItem'), require('../Model/ErrorArray'), require('../Model/EventCreateItem'), require('../Model/EventConnector1'), require('../Model/EventConnectorCreateItem'), require('../Model/FlowCreateItem'), require('../Model/FlowItem'), require('../Model/GatewayItem'), require('../Model/GatewayCreateItem'), require('../Model/GroupCreateItem'), require('../Model/GroupItem'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/InputOutputCreateItem'), require('../Model/InputOutputItem'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/OauthClientCreateItem'), require('../Model/OauthClientItem'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/UserItem'), require('../Model/UserCreateItem'), require('../Model/GroupAddUsersItem'), require('../Model/ImportItem'), require('../Model/ProcessCollection1'), require('../Model/DataModelItem1'), require('../Model/TriggerEventCreateItem'), require('../Model/InlineResponse2001'), require('../Model/BpmnImportItem'), require('../Model/DataModelCollection'), require('../Model/EventConnectorsCollection'), require('../Model/EventCollection'), require('../Model/FlowCollection'), require('../Model/GatewayCollection'), require('../Model/GroupCollection'), require('../Model/InputOutputCollection'), require('../Model/InstanceCollection'), require('../Model/ListLogCollection'), require('../Model/OauthClientCollection'), require('../Model/ProcessCollection'), require('../Model/TaskConnectorsCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/TokenCollection'), require('../Model/UserCollection'), require('../Model/InlineResponse200'), require('../Model/TaskRemoveGroupsItem'), require('../Model/GroupRemoveUsersItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/GroupSyncUsersItem'), require('../Model/EventUpdateItem'), require('../Model/EventConnectorUpdateItem'), require('../Model/FlowUpdateItem'), require('../Model/GatewayUpdateItem'), require('../Model/GroupUpdateItem'), require('../Model/InputOutputUpdateItem'), require('../Model/InstanceUpdateItem'), require('../Model/OauthClientUpdateItem'), require('../Model/ProcessUpdateItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'), require('../Model/UserUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.Client = factory(root.PMIO.ApiClient, root.PMIO.EventItem, root.PMIO.ErrorArray, root.PMIO.EventCreateItem, root.PMIO.EventConnector1, root.PMIO.EventConnectorCreateItem, root.PMIO.FlowCreateItem, root.PMIO.FlowItem, root.PMIO.GatewayItem, root.PMIO.GatewayCreateItem, root.PMIO.GroupCreateItem, root.PMIO.GroupItem, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.InputOutputCreateItem, root.PMIO.InputOutputItem, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.OauthClientCreateItem, root.PMIO.OauthClientItem, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.UserItem, root.PMIO.UserCreateItem, root.PMIO.GroupAddUsersItem, root.PMIO.DataModelItem1, root.PMIO.TriggerEventCreateItem, root.PMIO.DataModelCollection, root.PMIO.EventConnectorsCollection, root.PMIO.EventCollection, root.PMIO.FlowCollection, root.PMIO.GatewayCollection, root.PMIO.GroupCollection, root.PMIO.InputOutputCollection, root.PMIO.InstanceCollection, root.PMIO.OauthClientCollection, root.PMIO.ProcessCollection, root.PMIO.TaskConnectorsCollection, root.PMIO.InlineResponse200, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.TokenCollection, root.PMIO.UserCollection, root.PMIO.BpmnImportItem, root.PMIO.ProcessCollection1, root.PMIO.TaskRemoveGroupsItem, root.PMIO.GroupRemoveUsersItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.GroupSyncUsersItem, root.PMIO.EventUpdateItem, root.PMIO.EventConnectorUpdateItem, root.PMIO.FlowUpdateItem, root.PMIO.GatewayUpdateItem, root.PMIO.GroupUpdateItem, root.PMIO.InputOutputUpdateItem, root.PMIO.InstanceUpdateItem, root.PMIO.OauthClientUpdateItem, root.PMIO.ProcessUpdateItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem, root.PMIO.UserUpdateItem);
+    root.PMIO.Client = factory(root.PMIO.ApiClient, root.PMIO.EventItem, root.PMIO.ErrorArray, root.PMIO.EventCreateItem, root.PMIO.EventConnector1, root.PMIO.EventConnectorCreateItem, root.PMIO.FlowCreateItem, root.PMIO.FlowItem, root.PMIO.GatewayItem, root.PMIO.GatewayCreateItem, root.PMIO.GroupCreateItem, root.PMIO.GroupItem, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.InputOutputCreateItem, root.PMIO.InputOutputItem, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.OauthClientCreateItem, root.PMIO.OauthClientItem, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.UserItem, root.PMIO.UserCreateItem, root.PMIO.GroupAddUsersItem, root.PMIO.ImportItem, root.PMIO.ProcessCollection1, root.PMIO.DataModelItem1, root.PMIO.TriggerEventCreateItem, root.PMIO.InlineResponse2001, root.PMIO.BpmnImportItem, root.PMIO.DataModelCollection, root.PMIO.EventConnectorsCollection, root.PMIO.EventCollection, root.PMIO.FlowCollection, root.PMIO.GatewayCollection, root.PMIO.GroupCollection, root.PMIO.InputOutputCollection, root.PMIO.InstanceCollection, root.PMIO.ListLogCollection, root.PMIO.OauthClientCollection, root.PMIO.ProcessCollection, root.PMIO.TaskConnectorsCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.TokenCollection, root.PMIO.UserCollection, root.PMIO.InlineResponse200, root.PMIO.TaskRemoveGroupsItem, root.PMIO.GroupRemoveUsersItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.GroupSyncUsersItem, root.PMIO.EventUpdateItem, root.PMIO.EventConnectorUpdateItem, root.PMIO.FlowUpdateItem, root.PMIO.GatewayUpdateItem, root.PMIO.GroupUpdateItem, root.PMIO.InputOutputUpdateItem, root.PMIO.InstanceUpdateItem, root.PMIO.OauthClientUpdateItem, root.PMIO.ProcessUpdateItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem, root.PMIO.UserUpdateItem);
   }
-}(this, function(ApiClient, EventItem, ErrorArray, EventCreateItem, EventConnector1, EventConnectorCreateItem, FlowCreateItem, FlowItem, GatewayItem, GatewayCreateItem, GroupCreateItem, GroupItem, ResultSuccess, TaskAddGroupsItem, InputOutputCreateItem, InputOutputItem, InstanceCreateItem, InstanceItem, OauthClientCreateItem, OauthClientItem, ProcessItem, ProcessCreateItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, UserItem, UserCreateItem, GroupAddUsersItem, DataModelItem1, TriggerEventCreateItem, DataModelCollection, EventConnectorsCollection, EventCollection, FlowCollection, GatewayCollection, GroupCollection, InputOutputCollection, InstanceCollection, OauthClientCollection, ProcessCollection, TaskConnectorsCollection, InlineResponse200, TaskInstanceCollection, TaskCollection, TokenCollection, UserCollection, BpmnImportItem, ProcessCollection1, TaskRemoveGroupsItem, GroupRemoveUsersItem, TaskSyncGroupsItem, GroupSyncUsersItem, EventUpdateItem, EventConnectorUpdateItem, FlowUpdateItem, GatewayUpdateItem, GroupUpdateItem, InputOutputUpdateItem, InstanceUpdateItem, OauthClientUpdateItem, ProcessUpdateItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem, UserUpdateItem) {
+}(this, function(ApiClient, EventItem, ErrorArray, EventCreateItem, EventConnector1, EventConnectorCreateItem, FlowCreateItem, FlowItem, GatewayItem, GatewayCreateItem, GroupCreateItem, GroupItem, ResultSuccess, TaskAddGroupsItem, InputOutputCreateItem, InputOutputItem, InstanceCreateItem, InstanceItem, OauthClientCreateItem, OauthClientItem, ProcessItem, ProcessCreateItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, UserItem, UserCreateItem, GroupAddUsersItem, ImportItem, ProcessCollection1, DataModelItem1, TriggerEventCreateItem, InlineResponse2001, BpmnImportItem, DataModelCollection, EventConnectorsCollection, EventCollection, FlowCollection, GatewayCollection, GroupCollection, InputOutputCollection, InstanceCollection, ListLogCollection, OauthClientCollection, ProcessCollection, TaskConnectorsCollection, TaskInstanceCollection, TaskCollection, TokenCollection, UserCollection, InlineResponse200, TaskRemoveGroupsItem, GroupRemoveUsersItem, TaskSyncGroupsItem, GroupSyncUsersItem, EventUpdateItem, EventConnectorUpdateItem, FlowUpdateItem, GatewayUpdateItem, GroupUpdateItem, InputOutputUpdateItem, InstanceUpdateItem, OauthClientUpdateItem, ProcessUpdateItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem, UserUpdateItem) {
   'use strict';
 
   /**
@@ -693,10 +693,13 @@
     /**
      * This method creates a new user in the system. The client_id will appear in the results.  The &#x60;client_id&#x60; is required to obtain a &#x60;client_secret&#x60; and then you will be able to use it in an Oauth authorization key. Refer to [Oauth Client APIs](#tag/oauth)
      * @param {module:Processmaker/Model/UserCreateItem} userCreateItem JSON API with the User object to add
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.createClient If not empty - a new Oauth Client would be created along with User (default to 1)
      * @param {module:Processmaker/PMIO/Client~addUserCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/UserItem}
      */
-    this.addUser = function(userCreateItem, callback) {
+    this.addUser = function(userCreateItem, opts, callback) {
+      opts = opts || {};
       var postBody = userCreateItem;
 
       // verify the required parameter 'userCreateItem' is set
@@ -708,6 +711,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'create_client': opts['createClient']
       };
       var headerParams = {
       };
@@ -772,6 +776,50 @@
 
       return this.apiClient.callApi(
         '/groups/{id}/users', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the callImport operation.
+     * @callback module:Processmaker/PMIO/Client~callImportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ProcessCollection1} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method imports BPMN 2.0 files. A new process(es) is/are created and its object returned back when import is successful.
+     * @param {module:Processmaker/Model/ImportItem} importItem JSON API with the BPMN file to import
+     * @param {module:Processmaker/PMIO/Client~callImportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ProcessCollection1}
+     */
+    this.callImport = function(importItem, callback) {
+      var postBody = importItem;
+
+      // verify the required parameter 'importItem' is set
+      if (importItem == undefined || importItem == null) {
+        throw "Missing the required parameter 'importItem' when calling callImport";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ProcessCollection1;
+
+      return this.apiClient.callApi(
+        '/processes/import/bpmn', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1471,12 +1519,14 @@
      * This webhook method triggers a given event object.
      * @param {String} processId Process ID related to the event
      * @param {String} eventId ID of the event to trigger
-     * @param {String} triggerBody Freeform JSON structure, it will be passed to the newly created DataModel
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.anyVariable Any POST or GET variable will be passed to the newly created DataModel
      * @param {module:Processmaker/PMIO/Client~eventWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
-    this.eventWebhook = function(processId, eventId, triggerBody, callback) {
-      var postBody = triggerBody;
+    this.eventWebhook = function(processId, eventId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
@@ -1488,17 +1538,13 @@
         throw "Missing the required parameter 'eventId' when calling eventWebhook";
       }
 
-      // verify the required parameter 'triggerBody' is set
-      if (triggerBody == undefined || triggerBody == null) {
-        throw "Missing the required parameter 'triggerBody' when calling eventWebhook";
-      }
-
 
       var pathParams = {
         'process_id': processId,
         'event_id': eventId
       };
       var queryParams = {
+        'any_variable': opts['anyVariable']
       };
       var headerParams = {
       };
@@ -1512,64 +1558,6 @@
 
       return this.apiClient.callApi(
         '/processes/{process_id}/events/{event_id}/webhook', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findByFieldInsideDataModel operation.
-     * @callback module:Processmaker/PMIO/Client~findByFieldInsideDataModelCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/DataModelCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns the data model by field passed in get argument.
-     * @param {String} processId ID of the process to return
-     * @param {String} searchParam Key and value of searched field in DataModel
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findByFieldInsideDataModelCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/DataModelCollection}
-     */
-    this.findByFieldInsideDataModel = function(processId, searchParam, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findByFieldInsideDataModel";
-      }
-
-      // verify the required parameter 'searchParam' is set
-      if (searchParam == undefined || searchParam == null) {
-        throw "Missing the required parameter 'searchParam' when calling findByFieldInsideDataModel";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'search_param': searchParam
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = DataModelCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/datamodels/search/{search_param}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1745,115 +1733,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findEventConnectors operation.
-     * @callback module:Processmaker/PMIO/Client~findEventConnectorsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/EventConnectorsCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns all event connectors related to the run process and Event.
-     * @param {String} processId ID of the process to fetch
-     * @param {String} eventId ID of the task to fetch
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findEventConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/EventConnectorsCollection}
-     */
-    this.findEventConnectors = function(processId, eventId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findEventConnectors";
-      }
-
-      // verify the required parameter 'eventId' is set
-      if (eventId == undefined || eventId == null) {
-        throw "Missing the required parameter 'eventId' when calling findEventConnectors";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'event_id': eventId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = EventConnectorsCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/events/{event_id}/connectors', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findEvents operation.
-     * @callback module:Processmaker/PMIO/Client~findEventsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/EventCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns all events related to the running process.
-     * @param {String} processId ID of the process related to the event
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findEventsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/EventCollection}
-     */
-    this.findEvents = function(processId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findEvents";
-      }
-
-
-      var pathParams = {
-        'process_id': processId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = EventCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/events', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findFlowById operation.
      * @callback module:Processmaker/PMIO/Client~findFlowByIdCallback
      * @param {String} error Error message, if any.
@@ -1900,57 +1779,6 @@
 
       return this.apiClient.callApi(
         '/processes/{process_id}/flows/{flow_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findFlows operation.
-     * @callback module:Processmaker/PMIO/Client~findFlowsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/FlowCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing flows.
-     * @param {String} processId ID of the process related to the flow
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findFlowsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/FlowCollection}
-     */
-    this.findFlows = function(processId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findFlows";
-      }
-
-
-      var pathParams = {
-        'process_id': processId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = FlowCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/flows', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2009,57 +1837,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findGateways operation.
-     * @callback module:Processmaker/PMIO/Client~findGatewaysCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/GatewayCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing gateways.
-     * @param {String} processId ID of the process related to the gateway
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findGatewaysCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/GatewayCollection}
-     */
-    this.findGateways = function(processId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findGateways";
-      }
-
-
-      var pathParams = {
-        'process_id': processId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = GatewayCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/gateways', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findGroupById operation.
      * @callback module:Processmaker/PMIO/Client~findGroupByIdCallback
      * @param {String} error Error message, if any.
@@ -2099,50 +1876,6 @@
 
       return this.apiClient.callApi(
         '/groups/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findGroups operation.
-     * @callback module:Processmaker/PMIO/Client~findGroupsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/GroupCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing groups.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findGroupsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/GroupCollection}
-     */
-    this.findGroups = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = GroupCollection;
-
-      return this.apiClient.callApi(
-        '/groups', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2208,64 +1941,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findInputOutputs operation.
-     * @callback module:Processmaker/PMIO/Client~findInputOutputsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InputOutputCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing Input/Output objects in the related task instance.
-     * @param {String} processId Process ID related to Input/Output object
-     * @param {String} taskId Task instance ID related to Input/Output object
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findInputOutputsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InputOutputCollection}
-     */
-    this.findInputOutputs = function(processId, taskId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findInputOutputs";
-      }
-
-      // verify the required parameter 'taskId' is set
-      if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findInputOutputs";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'task_id': taskId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = InputOutputCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/tasks/{task_id}/inputoutput', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findInstanceById operation.
      * @callback module:Processmaker/PMIO/Client~findInstanceByIdCallback
      * @param {String} error Error message, if any.
@@ -2312,57 +1987,6 @@
 
       return this.apiClient.callApi(
         '/processes/{process_id}/instances/{instance_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findInstances operation.
-     * @callback module:Processmaker/PMIO/Client~findInstancesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InstanceCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves instances related to the process using the process ID
-     * @param {String} processId Process ID related to the instances
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findInstancesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InstanceCollection}
-     */
-    this.findInstances = function(processId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findInstances";
-      }
-
-
-      var pathParams = {
-        'process_id': processId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = InstanceCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/instances', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2421,57 +2045,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findOauthClients operation.
-     * @callback module:Processmaker/PMIO/Client~findOauthClientsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/OauthClientCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing Oauth clients belonging to a user.
-     * @param {String} userId User ID related to the Oauth clients
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findOauthClientsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/OauthClientCollection}
-     */
-    this.findOauthClients = function(userId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'userId' is set
-      if (userId == undefined || userId == null) {
-        throw "Missing the required parameter 'userId' when calling findOauthClients";
-      }
-
-
-      var pathParams = {
-        'user_id': userId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = OauthClientCollection;
-
-      return this.apiClient.callApi(
-        '/users/{user_id}/clients', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findProcessById operation.
      * @callback module:Processmaker/PMIO/Client~findProcessByIdCallback
      * @param {String} error Error message, if any.
@@ -2511,50 +2084,6 @@
 
       return this.apiClient.callApi(
         '/processes/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findProcesses operation.
-     * @callback module:Processmaker/PMIO/Client~findProcessesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/ProcessCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing processes.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findProcessesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/ProcessCollection}
-     */
-    this.findProcesses = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = ProcessCollection;
-
-      return this.apiClient.callApi(
-        '/processes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2672,68 +2201,10 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskConnectors operation.
-     * @callback module:Processmaker/PMIO/Client~findTaskConnectorsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskConnectorsCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns all task connectors related to the run process and task.
-     * @param {String} processId ID of the process to fetch
-     * @param {String} taskId ID of the task to fetch
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findTaskConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskConnectorsCollection}
-     */
-    this.findTaskConnectors = function(processId, taskId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTaskConnectors";
-      }
-
-      // verify the required parameter 'taskId' is set
-      if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskConnectors";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'task_id': taskId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskConnectorsCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/tasks/{task_id}/connectors', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findTaskInstanceById operation.
      * @callback module:Processmaker/PMIO/Client~findTaskInstanceByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InlineResponse200} data The data returned by the service call.
+     * @param {module:Processmaker/Model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2744,7 +2215,7 @@
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
      * @param {module:Processmaker/PMIO/Client~findTaskInstanceByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InlineResponse200}
+     * data is of type: {@link module:Processmaker/Model/InlineResponse2001}
      */
     this.findTaskInstanceById = function(taskInstanceId, opts, callback) {
       opts = opts || {};
@@ -2771,319 +2242,10 @@
       var authNames = ['PasswordGrant'];
       var contentTypes = ['application/vnd.api+json'];
       var accepts = ['application/vnd.api+json'];
-      var returnType = InlineResponse200;
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/task_instances/{task_instance_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTaskInstances operation.
-     * @callback module:Processmaker/PMIO/Client~findTaskInstancesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing task instances.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findTaskInstancesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
-     */
-    this.findTaskInstances = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskInstanceCollection;
-
-      return this.apiClient.callApi(
-        '/task_instances', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskId operation.
-     * @callback module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves task instances using the instance ID and the task ID.
-     * @param {String} instanceId ID of the instance
-     * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
-     */
-    this.findTaskInstancesByInstanceAndTaskId = function(instanceId, taskId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskId";
-      }
-
-      // verify the required parameter 'taskId' is set
-      if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskId";
-      }
-
-
-      var pathParams = {
-        'instance_id': instanceId,
-        'task_id': taskId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskInstanceCollection;
-
-      return this.apiClient.callApi(
-        '/instances/{instance_id}/tasks/{task_id}/task_instances', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskIdDelegated operation.
-     * @callback module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdDelegatedCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves delegated task instances using the instance ID and the task ID.
-     * @param {String} instanceId ID of the instance
-     * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdDelegatedCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
-     */
-    this.findTaskInstancesByInstanceAndTaskIdDelegated = function(instanceId, taskId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskIdDelegated";
-      }
-
-      // verify the required parameter 'taskId' is set
-      if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskIdDelegated";
-      }
-
-
-      var pathParams = {
-        'instance_id': instanceId,
-        'task_id': taskId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskInstanceCollection;
-
-      return this.apiClient.callApi(
-        '/instances/{instance_id}/tasks/{task_id}/task_instances/delegated', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskIdStarted operation.
-     * @callback module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdStartedCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves started task instances using the instance ID and the task ID.
-     * @param {String} instanceId ID of the instance
-     * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/Client~findTaskInstancesByInstanceAndTaskIdStartedCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
-     */
-    this.findTaskInstancesByInstanceAndTaskIdStarted = function(instanceId, taskId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskIdStarted";
-      }
-
-      // verify the required parameter 'taskId' is set
-      if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskIdStarted";
-      }
-
-
-      var pathParams = {
-        'instance_id': instanceId,
-        'task_id': taskId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskInstanceCollection;
-
-      return this.apiClient.callApi(
-        '/instances/{instance_id}/tasks/{task_id}/task_instances/started', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTasks operation.
-     * @callback module:Processmaker/PMIO/Client~findTasksCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TaskCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method is intended for returning a list of all tasks related to the process.
-     * @param {String} processId ID of the process relative to the task
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findTasksCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TaskCollection}
-     */
-    this.findTasks = function(processId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTasks";
-      }
-
-
-      var pathParams = {
-        'process_id': processId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TaskCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/tasks', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the findTokens operation.
-     * @callback module:Processmaker/PMIO/Client~findTokensCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/TokenCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves tokens related to the process and instance using the process and instance IDs
-     * @param {String} processId Process ID
-     * @param {String} instanceId Instance ID related to the process
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findTokensCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/TokenCollection}
-     */
-    this.findTokens = function(processId, instanceId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTokens";
-      }
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTokens";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'instance_id': instanceId
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = TokenCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3135,50 +2297,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findUsers operation.
-     * @callback module:Processmaker/PMIO/Client~findUsersCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/UserCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns all existing users in the system.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Client~findUsersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/UserCollection}
-     */
-    this.findUsers = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = UserCollection;
-
-      return this.apiClient.callApi(
-        '/users', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the importBpmnFile operation.
      * @callback module:Processmaker/PMIO/Client~importBpmnFileCallback
      * @param {String} error Error message, if any.
@@ -3217,6 +2335,1032 @@
 
       return this.apiClient.callApi(
         '/processes/import', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listByFieldInsideDataModel operation.
+     * @callback module:Processmaker/PMIO/Client~listByFieldInsideDataModelCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/DataModelCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns the data model by field passed in get argument.
+     * @param {String} processId ID of the process to return
+     * @param {String} searchParam Key and value of searched field in DataModel
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listByFieldInsideDataModelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/DataModelCollection}
+     */
+    this.listByFieldInsideDataModel = function(processId, searchParam, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listByFieldInsideDataModel";
+      }
+
+      // verify the required parameter 'searchParam' is set
+      if (searchParam == undefined || searchParam == null) {
+        throw "Missing the required parameter 'searchParam' when calling listByFieldInsideDataModel";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'search_param': searchParam
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = DataModelCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/datamodels/search/{search_param}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listEventConnectors operation.
+     * @callback module:Processmaker/PMIO/Client~listEventConnectorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/EventConnectorsCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns all event connectors related to the run process and Event.
+     * @param {String} processId ID of the process to fetch
+     * @param {String} eventId ID of the task to fetch
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listEventConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/EventConnectorsCollection}
+     */
+    this.listEventConnectors = function(processId, eventId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listEventConnectors";
+      }
+
+      // verify the required parameter 'eventId' is set
+      if (eventId == undefined || eventId == null) {
+        throw "Missing the required parameter 'eventId' when calling listEventConnectors";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'event_id': eventId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = EventConnectorsCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/events/{event_id}/connectors', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listEvents operation.
+     * @callback module:Processmaker/PMIO/Client~listEventsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/EventCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns all events related to the running process.
+     * @param {String} processId ID of the process related to the event
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/EventCollection}
+     */
+    this.listEvents = function(processId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listEvents";
+      }
+
+
+      var pathParams = {
+        'process_id': processId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = EventCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/events', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listFlows operation.
+     * @callback module:Processmaker/PMIO/Client~listFlowsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/FlowCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing flows.
+     * @param {String} processId ID of the process related to the flow
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listFlowsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/FlowCollection}
+     */
+    this.listFlows = function(processId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listFlows";
+      }
+
+
+      var pathParams = {
+        'process_id': processId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = FlowCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/flows', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listGateways operation.
+     * @callback module:Processmaker/PMIO/Client~listGatewaysCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/GatewayCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing gateways.
+     * @param {String} processId ID of the process related to the gateway
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listGatewaysCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/GatewayCollection}
+     */
+    this.listGateways = function(processId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listGateways";
+      }
+
+
+      var pathParams = {
+        'process_id': processId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = GatewayCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/gateways', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listGroups operation.
+     * @callback module:Processmaker/PMIO/Client~listGroupsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/GroupCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing groups.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listGroupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/GroupCollection}
+     */
+    this.listGroups = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = GroupCollection;
+
+      return this.apiClient.callApi(
+        '/groups', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listInputOutputs operation.
+     * @callback module:Processmaker/PMIO/Client~listInputOutputsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/InputOutputCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing Input/Output objects in the related task instance.
+     * @param {String} processId Process ID related to Input/Output object
+     * @param {String} taskId Task instance ID related to Input/Output object
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listInputOutputsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/InputOutputCollection}
+     */
+    this.listInputOutputs = function(processId, taskId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listInputOutputs";
+      }
+
+      // verify the required parameter 'taskId' is set
+      if (taskId == undefined || taskId == null) {
+        throw "Missing the required parameter 'taskId' when calling listInputOutputs";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'task_id': taskId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = InputOutputCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/tasks/{task_id}/inputoutput', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listInstances operation.
+     * @callback module:Processmaker/PMIO/Client~listInstancesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/InstanceCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves instances related to the process using the process ID
+     * @param {String} processId Process ID related to the instances
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listInstancesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/InstanceCollection}
+     */
+    this.listInstances = function(processId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listInstances";
+      }
+
+
+      var pathParams = {
+        'process_id': processId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = InstanceCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/instances', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listLogs operation.
+     * @callback module:Processmaker/PMIO/Client~listLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ListLogCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing logs.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search The string to search in logs.
+     * @param {String} opts.order The order of retrieved list.
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ListLogCollection}
+     */
+    this.listLogs = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'search': opts['search'],
+        'order': opts['order'],
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ListLogCollection;
+
+      return this.apiClient.callApi(
+        '/logs/', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listOauthClients operation.
+     * @callback module:Processmaker/PMIO/Client~listOauthClientsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/OauthClientCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing Oauth clients belonging to a user.
+     * @param {String} userId User ID related to the Oauth clients
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listOauthClientsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/OauthClientCollection}
+     */
+    this.listOauthClients = function(userId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'userId' is set
+      if (userId == undefined || userId == null) {
+        throw "Missing the required parameter 'userId' when calling listOauthClients";
+      }
+
+
+      var pathParams = {
+        'user_id': userId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = OauthClientCollection;
+
+      return this.apiClient.callApi(
+        '/users/{user_id}/clients', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listProcesses operation.
+     * @callback module:Processmaker/PMIO/Client~listProcessesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ProcessCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing processes.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listProcessesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ProcessCollection}
+     */
+    this.listProcesses = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ProcessCollection;
+
+      return this.apiClient.callApi(
+        '/processes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskConnectors operation.
+     * @callback module:Processmaker/PMIO/Client~listTaskConnectorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskConnectorsCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns all task connectors related to the run process and task.
+     * @param {String} processId ID of the process to fetch
+     * @param {String} taskId ID of the task to fetch
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listTaskConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskConnectorsCollection}
+     */
+    this.listTaskConnectors = function(processId, taskId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listTaskConnectors";
+      }
+
+      // verify the required parameter 'taskId' is set
+      if (taskId == undefined || taskId == null) {
+        throw "Missing the required parameter 'taskId' when calling listTaskConnectors";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'task_id': taskId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskConnectorsCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/tasks/{task_id}/connectors', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskInstances operation.
+     * @callback module:Processmaker/PMIO/Client~listTaskInstancesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing task instances.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listTaskInstancesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
+     */
+    this.listTaskInstances = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskInstanceCollection;
+
+      return this.apiClient.callApi(
+        '/task_instances', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskId operation.
+     * @callback module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves task instances using the instance ID and the task ID.
+     * @param {String} instanceId ID of the instance
+     * @param {String} taskId ID of the task
+     * @param {module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
+     */
+    this.listTaskInstancesByInstanceAndTaskId = function(instanceId, taskId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskId";
+      }
+
+      // verify the required parameter 'taskId' is set
+      if (taskId == undefined || taskId == null) {
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskId";
+      }
+
+
+      var pathParams = {
+        'instance_id': instanceId,
+        'task_id': taskId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskInstanceCollection;
+
+      return this.apiClient.callApi(
+        '/instances/{instance_id}/tasks/{task_id}/task_instances', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskIdDelegated operation.
+     * @callback module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdDelegatedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves delegated task instances using the instance ID and the task ID.
+     * @param {String} instanceId ID of the instance
+     * @param {String} taskId ID of the task
+     * @param {module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdDelegatedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
+     */
+    this.listTaskInstancesByInstanceAndTaskIdDelegated = function(instanceId, taskId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskIdDelegated";
+      }
+
+      // verify the required parameter 'taskId' is set
+      if (taskId == undefined || taskId == null) {
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskIdDelegated";
+      }
+
+
+      var pathParams = {
+        'instance_id': instanceId,
+        'task_id': taskId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskInstanceCollection;
+
+      return this.apiClient.callApi(
+        '/instances/{instance_id}/tasks/{task_id}/task_instances/delegated', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskIdStarted operation.
+     * @callback module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdStartedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves started task instances using the instance ID and the task ID.
+     * @param {String} instanceId ID of the instance
+     * @param {String} taskId ID of the task
+     * @param {module:Processmaker/PMIO/Client~listTaskInstancesByInstanceAndTaskIdStartedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
+     */
+    this.listTaskInstancesByInstanceAndTaskIdStarted = function(instanceId, taskId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskIdStarted";
+      }
+
+      // verify the required parameter 'taskId' is set
+      if (taskId == undefined || taskId == null) {
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskIdStarted";
+      }
+
+
+      var pathParams = {
+        'instance_id': instanceId,
+        'task_id': taskId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskInstanceCollection;
+
+      return this.apiClient.callApi(
+        '/instances/{instance_id}/tasks/{task_id}/task_instances/started', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTasks operation.
+     * @callback module:Processmaker/PMIO/Client~listTasksCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TaskCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method is intended for returning a list of all tasks related to the process.
+     * @param {String} processId ID of the process relative to the task
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listTasksCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TaskCollection}
+     */
+    this.listTasks = function(processId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listTasks";
+      }
+
+
+      var pathParams = {
+        'process_id': processId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TaskCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/tasks', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listTokens operation.
+     * @callback module:Processmaker/PMIO/Client~listTokensCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TokenCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves tokens related to the process and instance using the process and instance IDs
+     * @param {String} processId Process ID
+     * @param {String} instanceId Instance ID related to the process
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TokenCollection}
+     */
+    this.listTokens = function(processId, instanceId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listTokens";
+      }
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listTokens";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'instance_id': instanceId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TokenCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listUsers operation.
+     * @callback module:Processmaker/PMIO/Client~listUsersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/UserCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns all existing users in the system.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/UserCollection}
+     */
+    this.listUsers = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = UserCollection;
+
+      return this.apiClient.callApi(
+        '/users', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the logSummary operation.
+     * @callback module:Processmaker/PMIO/Client~logSummaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/InlineResponse200} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing logs by action and period.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.action The action to search in logs.
+     * @param {String} opts.dateFrom Start date for retrieved list.
+     * @param {String} opts.dateTo End date for retrieved list.
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~logSummaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/InlineResponse200}
+     */
+    this.logSummary = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'action': opts['action'],
+        'date_from': opts['dateFrom'],
+        'date_to': opts['dateTo'],
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = InlineResponse200;
+
+      return this.apiClient.callApi(
+        '/logs/summary', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -4133,7 +4277,7 @@
      * Callback function to receive the result of the updateTaskInstance operation.
      * @callback module:Processmaker/PMIO/Client~updateTaskInstanceCallback
      * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/InlineResponse200} data The data returned by the service call.
+     * @param {module:Processmaker/Model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -4142,7 +4286,7 @@
      * @param {String} taskInstanceId ID of the task instance to retrieve
      * @param {module:Processmaker/Model/TaskInstanceUpdateItem} taskInstanceUpdateItem Task instance object to update
      * @param {module:Processmaker/PMIO/Client~updateTaskInstanceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/InlineResponse200}
+     * data is of type: {@link module:Processmaker/Model/InlineResponse2001}
      */
     this.updateTaskInstance = function(taskInstanceId, taskInstanceUpdateItem, callback) {
       var postBody = taskInstanceUpdateItem;
@@ -4171,7 +4315,7 @@
       var authNames = ['PasswordGrant'];
       var contentTypes = ['application/vnd.api+json'];
       var accepts = ['application/vnd.api+json'];
-      var returnType = InlineResponse200;
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/task_instances/{task_instance_id}', 'PATCH',

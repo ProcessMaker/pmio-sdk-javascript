@@ -65,8 +65,8 @@
       //expect(instance).to.be.a(PMIO.DataModelAttributes);
     });
 
-    it('should have the property content (base name: "content")', function() {
-      // uncomment below and update the code to test the property content
+    it('should have the property dataModel (base name: "dataModel")', function() {
+      // uncomment below and update the code to test the property dataModel
       //var instane = new PMIO.DataModelAttributes();
       //expect(instance).to.be();
     });

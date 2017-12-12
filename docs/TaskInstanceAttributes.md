@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **duration** | **Integer** |  | [optional] 
 **instanceOverduePercentage** | **Number** |  | [optional] 
 **data** | **String** |  | [optional] 
-**content** | **String** |  | [optional] 
+**dataModel** | **String** |  | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 

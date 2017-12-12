@@ -199,6 +199,16 @@
         done();
       });
     });
+    describe('callImport', function() {
+      it('should call callImport successfully', function(done) {
+        //uncomment below and update the code to test callImport
+        //instance.callImport(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteEvent', function() {
       it('should call deleteEvent successfully', function(done) {
         //uncomment below and update the code to test deleteEvent
@@ -339,16 +349,6 @@
         done();
       });
     });
-    describe('findByFieldInsideDataModel', function() {
-      it('should call findByFieldInsideDataModel successfully', function(done) {
-        //uncomment below and update the code to test findByFieldInsideDataModel
-        //instance.findByFieldInsideDataModel(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findDataModel', function() {
       it('should call findDataModel successfully', function(done) {
         //uncomment below and update the code to test findDataModel
@@ -379,40 +379,10 @@
         done();
       });
     });
-    describe('findEventConnectors', function() {
-      it('should call findEventConnectors successfully', function(done) {
-        //uncomment below and update the code to test findEventConnectors
-        //instance.findEventConnectors(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findEvents', function() {
-      it('should call findEvents successfully', function(done) {
-        //uncomment below and update the code to test findEvents
-        //instance.findEvents(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findFlowById', function() {
       it('should call findFlowById successfully', function(done) {
         //uncomment below and update the code to test findFlowById
         //instance.findFlowById(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findFlows', function() {
-      it('should call findFlows successfully', function(done) {
-        //uncomment below and update the code to test findFlows
-        //instance.findFlows(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -429,30 +399,10 @@
         done();
       });
     });
-    describe('findGateways', function() {
-      it('should call findGateways successfully', function(done) {
-        //uncomment below and update the code to test findGateways
-        //instance.findGateways(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findGroupById', function() {
       it('should call findGroupById successfully', function(done) {
         //uncomment below and update the code to test findGroupById
         //instance.findGroupById(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findGroups', function() {
-      it('should call findGroups successfully', function(done) {
-        //uncomment below and update the code to test findGroups
-        //instance.findGroups(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -469,30 +419,10 @@
         done();
       });
     });
-    describe('findInputOutputs', function() {
-      it('should call findInputOutputs successfully', function(done) {
-        //uncomment below and update the code to test findInputOutputs
-        //instance.findInputOutputs(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findInstanceById', function() {
       it('should call findInstanceById successfully', function(done) {
         //uncomment below and update the code to test findInstanceById
         //instance.findInstanceById(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findInstances', function() {
-      it('should call findInstances successfully', function(done) {
-        //uncomment below and update the code to test findInstances
-        //instance.findInstances(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -509,30 +439,10 @@
         done();
       });
     });
-    describe('findOauthClients', function() {
-      it('should call findOauthClients successfully', function(done) {
-        //uncomment below and update the code to test findOauthClients
-        //instance.findOauthClients(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findProcessById', function() {
       it('should call findProcessById successfully', function(done) {
         //uncomment below and update the code to test findProcessById
         //instance.findProcessById(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findProcesses', function() {
-      it('should call findProcesses successfully', function(done) {
-        //uncomment below and update the code to test findProcesses
-        //instance.findProcesses(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -559,80 +469,10 @@
         done();
       });
     });
-    describe('findTaskConnectors', function() {
-      it('should call findTaskConnectors successfully', function(done) {
-        //uncomment below and update the code to test findTaskConnectors
-        //instance.findTaskConnectors(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('findTaskInstanceById', function() {
       it('should call findTaskInstanceById successfully', function(done) {
         //uncomment below and update the code to test findTaskInstanceById
         //instance.findTaskInstanceById(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTaskInstances', function() {
-      it('should call findTaskInstances successfully', function(done) {
-        //uncomment below and update the code to test findTaskInstances
-        //instance.findTaskInstances(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTaskInstancesByInstanceAndTaskId', function() {
-      it('should call findTaskInstancesByInstanceAndTaskId successfully', function(done) {
-        //uncomment below and update the code to test findTaskInstancesByInstanceAndTaskId
-        //instance.findTaskInstancesByInstanceAndTaskId(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTaskInstancesByInstanceAndTaskIdDelegated', function() {
-      it('should call findTaskInstancesByInstanceAndTaskIdDelegated successfully', function(done) {
-        //uncomment below and update the code to test findTaskInstancesByInstanceAndTaskIdDelegated
-        //instance.findTaskInstancesByInstanceAndTaskIdDelegated(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTaskInstancesByInstanceAndTaskIdStarted', function() {
-      it('should call findTaskInstancesByInstanceAndTaskIdStarted successfully', function(done) {
-        //uncomment below and update the code to test findTaskInstancesByInstanceAndTaskIdStarted
-        //instance.findTaskInstancesByInstanceAndTaskIdStarted(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTasks', function() {
-      it('should call findTasks successfully', function(done) {
-        //uncomment below and update the code to test findTasks
-        //instance.findTasks(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('findTokens', function() {
-      it('should call findTokens successfully', function(done) {
-        //uncomment below and update the code to test findTokens
-        //instance.findTokens(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -649,20 +489,210 @@
         done();
       });
     });
-    describe('findUsers', function() {
-      it('should call findUsers successfully', function(done) {
-        //uncomment below and update the code to test findUsers
-        //instance.findUsers(pet, function(error) {
+    describe('importBpmnFile', function() {
+      it('should call importBpmnFile successfully', function(done) {
+        //uncomment below and update the code to test importBpmnFile
+        //instance.importBpmnFile(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('importBpmnFile', function() {
-      it('should call importBpmnFile successfully', function(done) {
-        //uncomment below and update the code to test importBpmnFile
-        //instance.importBpmnFile(pet, function(error) {
+    describe('listByFieldInsideDataModel', function() {
+      it('should call listByFieldInsideDataModel successfully', function(done) {
+        //uncomment below and update the code to test listByFieldInsideDataModel
+        //instance.listByFieldInsideDataModel(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listEventConnectors', function() {
+      it('should call listEventConnectors successfully', function(done) {
+        //uncomment below and update the code to test listEventConnectors
+        //instance.listEventConnectors(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listEvents', function() {
+      it('should call listEvents successfully', function(done) {
+        //uncomment below and update the code to test listEvents
+        //instance.listEvents(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listFlows', function() {
+      it('should call listFlows successfully', function(done) {
+        //uncomment below and update the code to test listFlows
+        //instance.listFlows(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listGateways', function() {
+      it('should call listGateways successfully', function(done) {
+        //uncomment below and update the code to test listGateways
+        //instance.listGateways(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listGroups', function() {
+      it('should call listGroups successfully', function(done) {
+        //uncomment below and update the code to test listGroups
+        //instance.listGroups(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listInputOutputs', function() {
+      it('should call listInputOutputs successfully', function(done) {
+        //uncomment below and update the code to test listInputOutputs
+        //instance.listInputOutputs(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listInstances', function() {
+      it('should call listInstances successfully', function(done) {
+        //uncomment below and update the code to test listInstances
+        //instance.listInstances(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listLogs', function() {
+      it('should call listLogs successfully', function(done) {
+        //uncomment below and update the code to test listLogs
+        //instance.listLogs(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listOauthClients', function() {
+      it('should call listOauthClients successfully', function(done) {
+        //uncomment below and update the code to test listOauthClients
+        //instance.listOauthClients(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listProcesses', function() {
+      it('should call listProcesses successfully', function(done) {
+        //uncomment below and update the code to test listProcesses
+        //instance.listProcesses(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTaskConnectors', function() {
+      it('should call listTaskConnectors successfully', function(done) {
+        //uncomment below and update the code to test listTaskConnectors
+        //instance.listTaskConnectors(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTaskInstances', function() {
+      it('should call listTaskInstances successfully', function(done) {
+        //uncomment below and update the code to test listTaskInstances
+        //instance.listTaskInstances(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTaskInstancesByInstanceAndTaskId', function() {
+      it('should call listTaskInstancesByInstanceAndTaskId successfully', function(done) {
+        //uncomment below and update the code to test listTaskInstancesByInstanceAndTaskId
+        //instance.listTaskInstancesByInstanceAndTaskId(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTaskInstancesByInstanceAndTaskIdDelegated', function() {
+      it('should call listTaskInstancesByInstanceAndTaskIdDelegated successfully', function(done) {
+        //uncomment below and update the code to test listTaskInstancesByInstanceAndTaskIdDelegated
+        //instance.listTaskInstancesByInstanceAndTaskIdDelegated(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTaskInstancesByInstanceAndTaskIdStarted', function() {
+      it('should call listTaskInstancesByInstanceAndTaskIdStarted successfully', function(done) {
+        //uncomment below and update the code to test listTaskInstancesByInstanceAndTaskIdStarted
+        //instance.listTaskInstancesByInstanceAndTaskIdStarted(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTasks', function() {
+      it('should call listTasks successfully', function(done) {
+        //uncomment below and update the code to test listTasks
+        //instance.listTasks(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listTokens', function() {
+      it('should call listTokens successfully', function(done) {
+        //uncomment below and update the code to test listTokens
+        //instance.listTokens(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listUsers', function() {
+      it('should call listUsers successfully', function(done) {
+        //uncomment below and update the code to test listUsers
+        //instance.listUsers(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('logSummary', function() {
+      it('should call logSummary successfully', function(done) {
+        //uncomment below and update the code to test logSummary
+        //instance.logSummary(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

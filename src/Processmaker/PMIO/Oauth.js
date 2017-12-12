@@ -160,8 +160,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findOauthClients operation.
-     * @callback module:Processmaker/PMIO/Oauth~findOauthClientsCallback
+     * Callback function to receive the result of the listOauthClients operation.
+     * @callback module:Processmaker/PMIO/Oauth~listOauthClientsCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/OauthClientCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -173,16 +173,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Oauth~findOauthClientsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/Oauth~listOauthClientsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/OauthClientCollection}
      */
-    this.findOauthClients = function(userId, opts, callback) {
+    this.listOauthClients = function(userId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'userId' is set
       if (userId == undefined || userId == null) {
-        throw "Missing the required parameter 'userId' when calling findOauthClients";
+        throw "Missing the required parameter 'userId' when calling listOauthClients";
       }
 
 

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/ProcessUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/ImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/ProcessUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/ResultSuccess'), require('../Model/ProcessCollection'), require('../Model/BpmnImportItem'), require('../Model/ProcessCollection1'), require('../Model/ProcessUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/ImportItem'), require('../Model/ProcessCollection1'), require('../Model/ResultSuccess'), require('../Model/BpmnImportItem'), require('../Model/ProcessCollection'), require('../Model/ProcessUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.Processes = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.ResultSuccess, root.PMIO.ProcessCollection, root.PMIO.BpmnImportItem, root.PMIO.ProcessCollection1, root.PMIO.ProcessUpdateItem);
+    root.PMIO.Processes = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.ImportItem, root.PMIO.ProcessCollection1, root.PMIO.ResultSuccess, root.PMIO.BpmnImportItem, root.PMIO.ProcessCollection, root.PMIO.ProcessUpdateItem);
   }
-}(this, function(ApiClient, ErrorArray, ProcessItem, ProcessCreateItem, ResultSuccess, ProcessCollection, BpmnImportItem, ProcessCollection1, ProcessUpdateItem) {
+}(this, function(ApiClient, ErrorArray, ProcessItem, ProcessCreateItem, ImportItem, ProcessCollection1, ResultSuccess, BpmnImportItem, ProcessCollection, ProcessUpdateItem) {
   'use strict';
 
   /**
@@ -95,6 +95,50 @@
 
       return this.apiClient.callApi(
         '/processes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the callImport operation.
+     * @callback module:Processmaker/PMIO/Processes~callImportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ProcessCollection1} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method imports BPMN 2.0 files. A new process(es) is/are created and its object returned back when import is successful.
+     * @param {module:Processmaker/Model/ImportItem} importItem JSON API with the BPMN file to import
+     * @param {module:Processmaker/PMIO/Processes~callImportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ProcessCollection1}
+     */
+    this.callImport = function(importItem, callback) {
+      var postBody = importItem;
+
+      // verify the required parameter 'importItem' is set
+      if (importItem == undefined || importItem == null) {
+        throw "Missing the required parameter 'importItem' when calling callImport";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ProcessCollection1;
+
+      return this.apiClient.callApi(
+        '/processes/import/bpmn', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -191,50 +235,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findProcesses operation.
-     * @callback module:Processmaker/PMIO/Processes~findProcessesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/ProcessCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method retrieves all existing processes.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/Processes~findProcessesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/ProcessCollection}
-     */
-    this.findProcesses = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = ProcessCollection;
-
-      return this.apiClient.callApi(
-        '/processes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the importBpmnFile operation.
      * @callback module:Processmaker/PMIO/Processes~importBpmnFileCallback
      * @param {String} error Error message, if any.
@@ -273,6 +273,50 @@
 
       return this.apiClient.callApi(
         '/processes/import', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listProcesses operation.
+     * @callback module:Processmaker/PMIO/Processes~listProcessesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ProcessCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing processes.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Processes~listProcessesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ProcessCollection}
+     */
+    this.listProcesses = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ProcessCollection;
+
+      return this.apiClient.callApi(
+        '/processes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

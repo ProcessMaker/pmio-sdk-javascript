@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**TaskInstance**](TaskInstance.md) |  | 
+**data** | [**LogSummary**](LogSummary.md) |  | 
 
 

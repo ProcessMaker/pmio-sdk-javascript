@@ -89,12 +89,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property durationBy (base name: "duration_by")', function() {
-      // uncomment below and update the code to test the property durationBy
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
       //var instane = new PMIO.ProcessAttributes();
@@ -103,36 +97,6 @@
 
     it('should have the property assignment (base name: "assignment")', function() {
       // uncomment below and update the code to test the property assignment
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property designAccess (base name: "design_access")', function() {
-      // uncomment below and update the code to test the property designAccess
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property showMap (base name: "show_map")', function() {
-      // uncomment below and update the code to test the property showMap
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property showMessage (base name: "show_message")', function() {
-      // uncomment below and update the code to test the property showMessage
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property showDelegate (base name: "show_delegate")', function() {
-      // uncomment below and update the code to test the property showDelegate
-      //var instane = new PMIO.ProcessAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property showDynaform (base name: "show_dynaform")', function() {
-      // uncomment below and update the code to test the property showDynaform
       //var instane = new PMIO.ProcessAttributes();
       //expect(instance).to.be();
     });
@@ -161,8 +125,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property dynaformSummaryId (base name: "dynaform_summary_id")', function() {
-      // uncomment below and update the code to test the property dynaformSummaryId
+    it('should have the property refId (base name: "ref_id")', function() {
+      // uncomment below and update the code to test the property refId
       //var instane = new PMIO.ProcessAttributes();
       //expect(instance).to.be();
     });

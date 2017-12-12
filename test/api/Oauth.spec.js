@@ -79,10 +79,10 @@
         done();
       });
     });
-    describe('findOauthClients', function() {
-      it('should call findOauthClients successfully', function(done) {
-        //uncomment below and update the code to test findOauthClients
-        //instance.findOauthClients(pet, function(error) {
+    describe('listOauthClients', function() {
+      it('should call listOauthClients successfully', function(done) {
+        //uncomment below and update the code to test listOauthClients
+        //instance.listOauthClients(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

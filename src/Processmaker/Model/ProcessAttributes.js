@@ -71,6 +71,7 @@
 
 
 
+
   };
 
   /**
@@ -113,6 +114,9 @@
       }
       if (data.hasOwnProperty('debug')) {
         obj['debug'] = ApiClient.convertToType(data['debug'], 'Boolean');
+      }
+      if (data.hasOwnProperty('ref_id')) {
+        obj['ref_id'] = ApiClient.convertToType(data['ref_id'], 'String');
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -168,6 +172,11 @@
    * @default false
    */
   exports.prototype['debug'] = false;
+  /**
+   * Set as XML object ID if imported from BPMN file or can be optionally set when object added via API. Used to optionally refer object by ref_id instead of using its UUID.
+   * @member {String} ref_id
+   */
+  exports.prototype['ref_id'] = undefined;
   /**
    * @member {String} created_at
    */

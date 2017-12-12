@@ -95,102 +95,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property priorityVariable (base name: "priority_variable")', function() {
-      // uncomment below and update the code to test the property priorityVariable
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property assignVariable (base name: "assign_variable")', function() {
-      // uncomment below and update the code to test the property assignVariable
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property groupVariable (base name: "group_variable")', function() {
-      // uncomment below and update the code to test the property groupVariable
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property miInstanceVariable (base name: "mi_instance_variable")', function() {
-      // uncomment below and update the code to test the property miInstanceVariable
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property miCompleteVariable (base name: "mi_complete_variable")', function() {
-      // uncomment below and update the code to test the property miCompleteVariable
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property transferFly (base name: "transfer_fly")', function() {
-      // uncomment below and update the code to test the property transferFly
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property canUpload (base name: "can_upload")', function() {
-      // uncomment below and update the code to test the property canUpload
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property viewUpload (base name: "view_upload")', function() {
-      // uncomment below and update the code to test the property viewUpload
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property viewAdditionalDocumentation (base name: "view_additional_documentation")', function() {
-      // uncomment below and update the code to test the property viewAdditionalDocumentation
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property start (base name: "start")', function() {
-      // uncomment below and update the code to test the property start
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sendLastEmail (base name: "send_last_email")', function() {
-      // uncomment below and update the code to test the property sendLastEmail
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property derivationScreenTpl (base name: "derivation_screen_tpl")', function() {
-      // uncomment below and update the code to test the property derivationScreenTpl
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selfserviceTimeout (base name: "selfservice_timeout")', function() {
-      // uncomment below and update the code to test the property selfserviceTimeout
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selfserviceTime (base name: "selfservice_time")', function() {
-      // uncomment below and update the code to test the property selfserviceTime
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selfserviceTimeUnit (base name: "selfservice_time_unit")', function() {
-      // uncomment below and update the code to test the property selfserviceTimeUnit
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selfserviceExecution (base name: "selfservice_execution")', function() {
-      // uncomment below and update the code to test the property selfserviceExecution
-      //var instane = new PMIO.TaskAttributes();
-      //expect(instance).to.be();
-    });
-
     it('should have the property lastAssignedUserId (base name: "last_assigned_user_id")', function() {
       // uncomment below and update the code to test the property lastAssignedUserId
       //var instane = new PMIO.TaskAttributes();
@@ -199,6 +103,12 @@
 
     it('should have the property script (base name: "script")', function() {
       // uncomment below and update the code to test the property script
+      //var instane = new PMIO.TaskAttributes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property refId (base name: "ref_id")', function() {
+      // uncomment below and update the code to test the property refId
       //var instane = new PMIO.TaskAttributes();
       //expect(instance).to.be();
     });

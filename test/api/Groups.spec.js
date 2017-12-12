@@ -99,10 +99,10 @@
         done();
       });
     });
-    describe('findGroups', function() {
-      it('should call findGroups successfully', function(done) {
-        //uncomment below and update the code to test findGroups
-        //instance.findGroups(pet, function(error) {
+    describe('listGroups', function() {
+      it('should call listGroups successfully', function(done) {
+        //uncomment below and update the code to test listGroups
+        //instance.listGroups(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

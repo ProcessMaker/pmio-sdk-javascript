@@ -137,6 +137,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property refId (base name: "ref_id")', function() {
+      // uncomment below and update the code to test the property refId
+      //var instane = new PMIO.EventAttributes();
+      //expect(instance).to.be();
+    });
+
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instane = new PMIO.EventAttributes();

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **duration** | **String** |  | [optional] 
 **cycle** | **String** |  | [optional] 
 **attachedToTaskId** | **String** |  | [optional] 
+**refId** | **String** | Set as XML object ID if imported from BPMN file or can be optionally set when object added via API. Used to optionally refer object by ref_id instead of using its UUID. | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 

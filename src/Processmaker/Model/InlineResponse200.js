@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/TaskInstance'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/LogSummary'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TaskInstance'));
+    module.exports = factory(require('../ApiClient'), require('./LogSummary'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.InlineResponse200 = factory(root.PMIO.ApiClient, root.PMIO.TaskInstance);
+    root.PMIO.InlineResponse200 = factory(root.PMIO.ApiClient, root.PMIO.LogSummary);
   }
-}(this, function(ApiClient, TaskInstance) {
+}(this, function(ApiClient, LogSummary) {
   'use strict';
 
 
@@ -52,7 +52,7 @@
    * Constructs a new <code>InlineResponse200</code>.
    * @alias module:Processmaker/Model/InlineResponse200
    * @class
-   * @param data {module:Processmaker/Model/TaskInstance} 
+   * @param data {module:Processmaker/Model/LogSummary} 
    */
   var exports = function(data) {
     var _this = this;
@@ -72,14 +72,14 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('data')) {
-        obj['data'] = TaskInstance.constructFromObject(data['data']);
+        obj['data'] = LogSummary.constructFromObject(data['data']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:Processmaker/Model/TaskInstance} data
+   * @member {module:Processmaker/Model/LogSummary} data
    */
   exports.prototype['data'] = undefined;
 

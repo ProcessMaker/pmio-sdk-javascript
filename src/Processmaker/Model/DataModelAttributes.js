@@ -52,12 +52,12 @@
    * Constructs a new <code>DataModelAttributes</code>.
    * @alias module:Processmaker/Model/DataModelAttributes
    * @class
-   * @param content {String} 
+   * @param dataModel {String} 
    */
-  var exports = function(content) {
+  var exports = function(dataModel) {
     var _this = this;
 
-    _this['content'] = content;
+    _this['dataModel'] = dataModel;
 
 
   };
@@ -73,8 +73,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('dataModel')) {
+        obj['dataModel'] = ApiClient.convertToType(data['dataModel'], 'String');
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -87,9 +87,9 @@
   }
 
   /**
-   * @member {String} content
+   * @member {String} dataModel
    */
-  exports.prototype['content'] = undefined;
+  exports.prototype['dataModel'] = undefined;
   /**
    * @member {String} created_at
    */

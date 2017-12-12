@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**addUsersToGroup**](Groups.md#addUsersToGroup) | **PUT** /groups/{id}/users | 
 [**deleteGroup**](Groups.md#deleteGroup) | **DELETE** /groups/{id} | 
 [**findGroupById**](Groups.md#findGroupById) | **GET** /groups/{id} | 
-[**findGroups**](Groups.md#findGroups) | **GET** /groups | 
+[**listGroups**](Groups.md#listGroups) | **GET** /groups | 
 [**removeUsersFromGroup**](Groups.md#removeUsersFromGroup) | **DELETE** /groups/{id}/users | 
 [**syncUsersToGroup**](Groups.md#syncUsersToGroup) | **POST** /groups/{id}/users | 
 [**updateGroup**](Groups.md#updateGroup) | **PUT** /groups/{id} | 
@@ -221,9 +221,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findGroups"></a>
-# **findGroups**
-> GroupCollection findGroups(opts)
+<a name="listGroups"></a>
+# **listGroups**
+> GroupCollection listGroups(opts)
 
 
 
@@ -252,7 +252,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.findGroups(opts, callback);
+apiInstance.listGroups(opts, callback);
 ```
 
 ### Parameters

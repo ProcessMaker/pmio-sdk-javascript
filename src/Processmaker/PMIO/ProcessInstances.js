@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/InstanceUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/InstanceUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/ResultSuccess'), require('../Model/DataModelCollection'), require('../Model/DataModelItem1'), require('../Model/InstanceCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TokenCollection'), require('../Model/InstanceUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/ResultSuccess'), require('../Model/DataModelItem1'), require('../Model/DataModelCollection'), require('../Model/InstanceCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TokenCollection'), require('../Model/InstanceUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.ProcessInstances = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.ResultSuccess, root.PMIO.DataModelCollection, root.PMIO.DataModelItem1, root.PMIO.InstanceCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TokenCollection, root.PMIO.InstanceUpdateItem);
+    root.PMIO.ProcessInstances = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.ResultSuccess, root.PMIO.DataModelItem1, root.PMIO.DataModelCollection, root.PMIO.InstanceCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TokenCollection, root.PMIO.InstanceUpdateItem);
   }
-}(this, function(ApiClient, ErrorArray, InstanceCreateItem, InstanceItem, ResultSuccess, DataModelCollection, DataModelItem1, InstanceCollection, TaskInstanceCollection, TokenCollection, InstanceUpdateItem) {
+}(this, function(ApiClient, ErrorArray, InstanceCreateItem, InstanceItem, ResultSuccess, DataModelItem1, DataModelCollection, InstanceCollection, TaskInstanceCollection, TokenCollection, InstanceUpdateItem) {
   'use strict';
 
   /**
@@ -160,64 +160,6 @@
     }
 
     /**
-     * Callback function to receive the result of the findByFieldInsideDataModel operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findByFieldInsideDataModelCallback
-     * @param {String} error Error message, if any.
-     * @param {module:Processmaker/Model/DataModelCollection} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This method returns the data model by field passed in get argument.
-     * @param {String} processId ID of the process to return
-     * @param {String} searchParam Key and value of searched field in DataModel
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page number to fetch (default to 1)
-     * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/ProcessInstances~findByFieldInsideDataModelCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Processmaker/Model/DataModelCollection}
-     */
-    this.findByFieldInsideDataModel = function(processId, searchParam, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findByFieldInsideDataModel";
-      }
-
-      // verify the required parameter 'searchParam' is set
-      if (searchParam == undefined || searchParam == null) {
-        throw "Missing the required parameter 'searchParam' when calling findByFieldInsideDataModel";
-      }
-
-
-      var pathParams = {
-        'process_id': processId,
-        'search_param': searchParam
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['PasswordGrant'];
-      var contentTypes = ['application/vnd.api+json'];
-      var accepts = ['application/vnd.api+json'];
-      var returnType = DataModelCollection;
-
-      return this.apiClient.callApi(
-        '/processes/{process_id}/datamodels/search/{search_param}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the findDataModel operation.
      * @callback module:Processmaker/PMIO/ProcessInstances~findDataModelCallback
      * @param {String} error Error message, if any.
@@ -328,8 +270,66 @@
     }
 
     /**
-     * Callback function to receive the result of the findInstances operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findInstancesCallback
+     * Callback function to receive the result of the listByFieldInsideDataModel operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listByFieldInsideDataModelCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/DataModelCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method returns the data model by field passed in get argument.
+     * @param {String} processId ID of the process to return
+     * @param {String} searchParam Key and value of searched field in DataModel
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/ProcessInstances~listByFieldInsideDataModelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/DataModelCollection}
+     */
+    this.listByFieldInsideDataModel = function(processId, searchParam, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listByFieldInsideDataModel";
+      }
+
+      // verify the required parameter 'searchParam' is set
+      if (searchParam == undefined || searchParam == null) {
+        throw "Missing the required parameter 'searchParam' when calling listByFieldInsideDataModel";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'search_param': searchParam
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = DataModelCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/datamodels/search/{search_param}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listInstances operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listInstancesCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/InstanceCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -341,16 +341,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/ProcessInstances~findInstancesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/ProcessInstances~listInstancesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/InstanceCollection}
      */
-    this.findInstances = function(processId, opts, callback) {
+    this.listInstances = function(processId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findInstances";
+        throw "Missing the required parameter 'processId' when calling listInstances";
       }
 
 
@@ -379,8 +379,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskId operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdCallback
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskId operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -390,20 +390,20 @@
      * This method retrieves task instances using the instance ID and the task ID.
      * @param {String} instanceId ID of the instance
      * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
      */
-    this.findTaskInstancesByInstanceAndTaskId = function(instanceId, taskId, callback) {
+    this.listTaskInstancesByInstanceAndTaskId = function(instanceId, taskId, callback) {
       var postBody = null;
 
       // verify the required parameter 'instanceId' is set
       if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskId";
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskId";
       }
 
       // verify the required parameter 'taskId' is set
       if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskId";
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskId";
       }
 
 
@@ -431,8 +431,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskIdDelegated operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdDelegatedCallback
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskIdDelegated operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdDelegatedCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -442,20 +442,20 @@
      * This method retrieves delegated task instances using the instance ID and the task ID.
      * @param {String} instanceId ID of the instance
      * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdDelegatedCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdDelegatedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
      */
-    this.findTaskInstancesByInstanceAndTaskIdDelegated = function(instanceId, taskId, callback) {
+    this.listTaskInstancesByInstanceAndTaskIdDelegated = function(instanceId, taskId, callback) {
       var postBody = null;
 
       // verify the required parameter 'instanceId' is set
       if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskIdDelegated";
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskIdDelegated";
       }
 
       // verify the required parameter 'taskId' is set
       if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskIdDelegated";
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskIdDelegated";
       }
 
 
@@ -483,8 +483,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTaskInstancesByInstanceAndTaskIdStarted operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdStartedCallback
+     * Callback function to receive the result of the listTaskInstancesByInstanceAndTaskIdStarted operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdStartedCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TaskInstanceCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -494,20 +494,20 @@
      * This method retrieves started task instances using the instance ID and the task ID.
      * @param {String} instanceId ID of the instance
      * @param {String} taskId ID of the task
-     * @param {module:Processmaker/PMIO/ProcessInstances~findTaskInstancesByInstanceAndTaskIdStartedCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/ProcessInstances~listTaskInstancesByInstanceAndTaskIdStartedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TaskInstanceCollection}
      */
-    this.findTaskInstancesByInstanceAndTaskIdStarted = function(instanceId, taskId, callback) {
+    this.listTaskInstancesByInstanceAndTaskIdStarted = function(instanceId, taskId, callback) {
       var postBody = null;
 
       // verify the required parameter 'instanceId' is set
       if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTaskInstancesByInstanceAndTaskIdStarted";
+        throw "Missing the required parameter 'instanceId' when calling listTaskInstancesByInstanceAndTaskIdStarted";
       }
 
       // verify the required parameter 'taskId' is set
       if (taskId == undefined || taskId == null) {
-        throw "Missing the required parameter 'taskId' when calling findTaskInstancesByInstanceAndTaskIdStarted";
+        throw "Missing the required parameter 'taskId' when calling listTaskInstancesByInstanceAndTaskIdStarted";
       }
 
 
@@ -535,8 +535,8 @@
     }
 
     /**
-     * Callback function to receive the result of the findTokens operation.
-     * @callback module:Processmaker/PMIO/ProcessInstances~findTokensCallback
+     * Callback function to receive the result of the listTokens operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listTokensCallback
      * @param {String} error Error message, if any.
      * @param {module:Processmaker/Model/TokenCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -549,21 +549,21 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
-     * @param {module:Processmaker/PMIO/ProcessInstances~findTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:Processmaker/PMIO/ProcessInstances~listTokensCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TokenCollection}
      */
-    this.findTokens = function(processId, instanceId, opts, callback) {
+    this.listTokens = function(processId, instanceId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'processId' is set
       if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling findTokens";
+        throw "Missing the required parameter 'processId' when calling listTokens";
       }
 
       // verify the required parameter 'instanceId' is set
       if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling findTokens";
+        throw "Missing the required parameter 'instanceId' when calling listTokens";
       }
 
 

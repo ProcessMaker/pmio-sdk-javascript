@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**addTaskConnector**](Client.md#addTaskConnector) | **POST** /processes/{process_id}/tasks/{task_id}/connectors | 
 [**addUser**](Client.md#addUser) | **POST** /users | 
 [**addUsersToGroup**](Client.md#addUsersToGroup) | **PUT** /groups/{id}/users | 
+[**callImport**](Client.md#callImport) | **POST** /processes/import/bpmn | 
 [**deleteEvent**](Client.md#deleteEvent) | **DELETE** /processes/{process_id}/events/{event_id} | 
 [**deleteEventConnector**](Client.md#deleteEventConnector) | **DELETE** /processes/{process_id}/events/{event_id}/connectors/{connector_id} | 
 [**deleteFlow**](Client.md#deleteFlow) | **DELETE** /processes/{process_id}/flows/{flow_id} | 
@@ -32,39 +33,41 @@ Method | HTTP request | Description
 [**deleteUser**](Client.md#deleteUser) | **DELETE** /users/{id} | 
 [**eventTrigger**](Client.md#eventTrigger) | **POST** /processes/{process_id}/events/{event_id}/trigger | 
 [**eventWebhook**](Client.md#eventWebhook) | **POST** /processes/{process_id}/events/{event_id}/webhook | 
-[**findByFieldInsideDataModel**](Client.md#findByFieldInsideDataModel) | **GET** /processes/{process_id}/datamodels/search/{search_param} | 
 [**findDataModel**](Client.md#findDataModel) | **GET** /processes/{process_id}/instances/{instance_id}/datamodel | 
 [**findEventById**](Client.md#findEventById) | **GET** /processes/{process_id}/events/{event_id} | 
 [**findEventConnectorById**](Client.md#findEventConnectorById) | **GET** /processes/{process_id}/events/{event_id}/connectors/{connector_id} | 
-[**findEventConnectors**](Client.md#findEventConnectors) | **GET** /processes/{process_id}/events/{event_id}/connectors | 
-[**findEvents**](Client.md#findEvents) | **GET** /processes/{process_id}/events | 
 [**findFlowById**](Client.md#findFlowById) | **GET** /processes/{process_id}/flows/{flow_id} | 
-[**findFlows**](Client.md#findFlows) | **GET** /processes/{process_id}/flows | 
 [**findGatewayById**](Client.md#findGatewayById) | **GET** /processes/{process_id}/gateways/{gateway_id} | 
-[**findGateways**](Client.md#findGateways) | **GET** /processes/{process_id}/gateways | 
 [**findGroupById**](Client.md#findGroupById) | **GET** /groups/{id} | 
-[**findGroups**](Client.md#findGroups) | **GET** /groups | 
 [**findInputOutputById**](Client.md#findInputOutputById) | **GET** /processes/{process_id}/tasks/{task_id}/inputoutput/{inputoutput_uid} | 
-[**findInputOutputs**](Client.md#findInputOutputs) | **GET** /processes/{process_id}/tasks/{task_id}/inputoutput | 
 [**findInstanceById**](Client.md#findInstanceById) | **GET** /processes/{process_id}/instances/{instance_id} | 
-[**findInstances**](Client.md#findInstances) | **GET** /processes/{process_id}/instances | 
 [**findOauthClientById**](Client.md#findOauthClientById) | **GET** /users/{user_id}/clients/{client_id} | 
-[**findOauthClients**](Client.md#findOauthClients) | **GET** /users/{user_id}/clients | 
 [**findProcessById**](Client.md#findProcessById) | **GET** /processes/{id} | 
-[**findProcesses**](Client.md#findProcesses) | **GET** /processes | 
 [**findTaskById**](Client.md#findTaskById) | **GET** /processes/{process_id}/tasks/{task_id} | 
 [**findTaskConnectorById**](Client.md#findTaskConnectorById) | **GET** /processes/{process_id}/tasks/{task_id}/connectors/{connector_id} | 
-[**findTaskConnectors**](Client.md#findTaskConnectors) | **GET** /processes/{process_id}/tasks/{task_id}/connectors | 
 [**findTaskInstanceById**](Client.md#findTaskInstanceById) | **GET** /task_instances/{task_instance_id} | 
-[**findTaskInstances**](Client.md#findTaskInstances) | **GET** /task_instances | 
-[**findTaskInstancesByInstanceAndTaskId**](Client.md#findTaskInstancesByInstanceAndTaskId) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances | 
-[**findTaskInstancesByInstanceAndTaskIdDelegated**](Client.md#findTaskInstancesByInstanceAndTaskIdDelegated) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/delegated | 
-[**findTaskInstancesByInstanceAndTaskIdStarted**](Client.md#findTaskInstancesByInstanceAndTaskIdStarted) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/started | 
-[**findTasks**](Client.md#findTasks) | **GET** /processes/{process_id}/tasks | 
-[**findTokens**](Client.md#findTokens) | **GET** /processes/{process_id}/instances/{instance_id}/tokens | 
 [**findUserById**](Client.md#findUserById) | **GET** /users/{id} | 
-[**findUsers**](Client.md#findUsers) | **GET** /users | 
 [**importBpmnFile**](Client.md#importBpmnFile) | **POST** /processes/import | 
+[**listByFieldInsideDataModel**](Client.md#listByFieldInsideDataModel) | **GET** /processes/{process_id}/datamodels/search/{search_param} | 
+[**listEventConnectors**](Client.md#listEventConnectors) | **GET** /processes/{process_id}/events/{event_id}/connectors | 
+[**listEvents**](Client.md#listEvents) | **GET** /processes/{process_id}/events | 
+[**listFlows**](Client.md#listFlows) | **GET** /processes/{process_id}/flows | 
+[**listGateways**](Client.md#listGateways) | **GET** /processes/{process_id}/gateways | 
+[**listGroups**](Client.md#listGroups) | **GET** /groups | 
+[**listInputOutputs**](Client.md#listInputOutputs) | **GET** /processes/{process_id}/tasks/{task_id}/inputoutput | 
+[**listInstances**](Client.md#listInstances) | **GET** /processes/{process_id}/instances | 
+[**listLogs**](Client.md#listLogs) | **GET** /logs/ | 
+[**listOauthClients**](Client.md#listOauthClients) | **GET** /users/{user_id}/clients | 
+[**listProcesses**](Client.md#listProcesses) | **GET** /processes | 
+[**listTaskConnectors**](Client.md#listTaskConnectors) | **GET** /processes/{process_id}/tasks/{task_id}/connectors | 
+[**listTaskInstances**](Client.md#listTaskInstances) | **GET** /task_instances | 
+[**listTaskInstancesByInstanceAndTaskId**](Client.md#listTaskInstancesByInstanceAndTaskId) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances | 
+[**listTaskInstancesByInstanceAndTaskIdDelegated**](Client.md#listTaskInstancesByInstanceAndTaskIdDelegated) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/delegated | 
+[**listTaskInstancesByInstanceAndTaskIdStarted**](Client.md#listTaskInstancesByInstanceAndTaskIdStarted) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/started | 
+[**listTasks**](Client.md#listTasks) | **GET** /processes/{process_id}/tasks | 
+[**listTokens**](Client.md#listTokens) | **GET** /processes/{process_id}/instances/{instance_id}/tokens | 
+[**listUsers**](Client.md#listUsers) | **GET** /users | 
+[**logSummary**](Client.md#logSummary) | **GET** /logs/summary | 
 [**myselfUser**](Client.md#myselfUser) | **GET** /users/myself | 
 [**removeGroupsFromTask**](Client.md#removeGroupsFromTask) | **DELETE** /processes/{process_id}/tasks/{task_id}/groups | 
 [**removeUsersFromGroup**](Client.md#removeUsersFromGroup) | **DELETE** /groups/{id}/users | 
@@ -741,7 +744,7 @@ Name | Type | Description  | Notes
 
 <a name="addUser"></a>
 # **addUser**
-> UserItem addUser(userCreateItem)
+> UserItem addUser(userCreateItem, opts)
 
 
 
@@ -760,6 +763,9 @@ var apiInstance = new PMIO.Client();
 
 var userCreateItem = new PMIO.UserCreateItem(); // UserCreateItem | JSON API with the User object to add
 
+var opts = { 
+  'createClient': "1" // String | If not empty - a new Oauth Client would be created along with User
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -768,7 +774,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.addUser(userCreateItem, callback);
+apiInstance.addUser(userCreateItem, opts, callback);
 ```
 
 ### Parameters
@@ -776,6 +782,7 @@ apiInstance.addUser(userCreateItem, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userCreateItem** | [**UserCreateItem**](UserCreateItem.md)| JSON API with the User object to add | 
+ **createClient** | **String**| If not empty - a new Oauth Client would be created along with User | [optional] [default to 1]
 
 ### Return type
 
@@ -834,6 +841,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ResultSuccess**](ResultSuccess.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="callImport"></a>
+# **callImport**
+> ProcessCollection1 callImport(importItem)
+
+
+
+This method imports BPMN 2.0 files. A new process(es) is/are created and its object returned back when import is successful.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var importItem = new PMIO.ImportItem(); // ImportItem | JSON API with the BPMN file to import
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.callImport(importItem, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **importItem** | [**ImportItem**](ImportItem.md)| JSON API with the BPMN file to import | 
+
+### Return type
+
+[**ProcessCollection1**](ProcessCollection1.md)
 
 ### Authorization
 
@@ -1551,7 +1609,7 @@ Name | Type | Description  | Notes
 
 <a name="eventWebhook"></a>
 # **eventWebhook**
-> &#39;String&#39; eventWebhook(processId, eventId, triggerBody)
+> &#39;String&#39; eventWebhook(processId, eventId, opts)
 
 
 
@@ -1572,8 +1630,9 @@ var processId = "processId_example"; // String | Process ID related to the event
 
 var eventId = "eventId_example"; // String | ID of the event to trigger
 
-var triggerBody = "triggerBody_example"; // String | Freeform JSON structure, it will be passed to the newly created DataModel
-
+var opts = { 
+  'anyVariable': "anyVariable_example" // String | Any POST or GET variable will be passed to the newly created DataModel
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1582,7 +1641,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventWebhook(processId, eventId, triggerBody, callback);
+apiInstance.eventWebhook(processId, eventId, opts, callback);
 ```
 
 ### Parameters
@@ -1591,71 +1650,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **processId** | **String**| Process ID related to the event | 
  **eventId** | **String**| ID of the event to trigger | 
- **triggerBody** | **String**| Freeform JSON structure, it will be passed to the newly created DataModel | 
+ **anyVariable** | **String**| Any POST or GET variable will be passed to the newly created DataModel | [optional] 
 
 ### Return type
 
 **&#39;String&#39;**
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findByFieldInsideDataModel"></a>
-# **findByFieldInsideDataModel**
-> DataModelCollection findByFieldInsideDataModel(processId, searchParam, opts)
-
-
-
-This method returns the data model by field passed in get argument.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process to return
-
-var searchParam = "searchParam_example"; // String | Key and value of searched field in DataModel
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findByFieldInsideDataModel(processId, searchParam, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process to return | 
- **searchParam** | **String**| Key and value of searched field in DataModel | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**DataModelCollection**](DataModelCollection.md)
 
 ### Authorization
 
@@ -1837,123 +1836,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findEventConnectors"></a>
-# **findEventConnectors**
-> EventConnectorsCollection findEventConnectors(processId, eventId, opts)
-
-
-
-This method returns all event connectors related to the run process and Event.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process to fetch
-
-var eventId = "eventId_example"; // String | ID of the task to fetch
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findEventConnectors(processId, eventId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process to fetch | 
- **eventId** | **String**| ID of the task to fetch | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**EventConnectorsCollection**](EventConnectorsCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findEvents"></a>
-# **findEvents**
-> EventCollection findEvents(processId, opts)
-
-
-
-This method returns all events related to the running process.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process related to the event
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findEvents(processId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process related to the event | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**EventCollection**](EventCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="findFlowById"></a>
 # **findFlowById**
 > FlowItem findFlowById(processId, flowId)
@@ -1998,63 +1880,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FlowItem**](FlowItem.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findFlows"></a>
-# **findFlows**
-> FlowCollection findFlows(processId, opts)
-
-
-
-This method retrieves all existing flows.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process related to the flow
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findFlows(processId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process related to the flow | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**FlowCollection**](FlowCollection.md)
 
 ### Authorization
 
@@ -2119,63 +1944,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findGateways"></a>
-# **findGateways**
-> GatewayCollection findGateways(processId, opts)
-
-
-
-This method retrieves all existing gateways.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process related to the gateway
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findGateways(processId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process related to the gateway | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**GatewayCollection**](GatewayCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="findGroupById"></a>
 # **findGroupById**
 > GroupItem findGroupById(id)
@@ -2217,60 +1985,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GroupItem**](GroupItem.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findGroups"></a>
-# **findGroups**
-> GroupCollection findGroups(opts)
-
-
-
-This method retrieves all existing groups.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findGroups(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**GroupCollection**](GroupCollection.md)
 
 ### Authorization
 
@@ -2338,66 +2052,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findInputOutputs"></a>
-# **findInputOutputs**
-> InputOutputCollection findInputOutputs(processId, taskId, opts)
-
-
-
-This method retrieves all existing Input/Output objects in the related task instance.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | Process ID related to Input/Output object
-
-var taskId = "taskId_example"; // String | Task instance ID related to Input/Output object
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findInputOutputs(processId, taskId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| Process ID related to Input/Output object | 
- **taskId** | **String**| Task instance ID related to Input/Output object | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**InputOutputCollection**](InputOutputCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="findInstanceById"></a>
 # **findInstanceById**
 > InstanceItem findInstanceById(processId, instanceId)
@@ -2442,63 +2096,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InstanceItem**](InstanceItem.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findInstances"></a>
-# **findInstances**
-> InstanceCollection findInstances(processId, opts)
-
-
-
-This method retrieves instances related to the process using the process ID
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | Process ID related to the instances
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findInstances(processId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| Process ID related to the instances | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**InstanceCollection**](InstanceCollection.md)
 
 ### Authorization
 
@@ -2563,63 +2160,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findOauthClients"></a>
-# **findOauthClients**
-> OauthClientCollection findOauthClients(userId, opts)
-
-
-
-This method retrieves all existing Oauth clients belonging to a user.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var userId = "userId_example"; // String | User ID related to the Oauth clients
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findOauthClients(userId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **String**| User ID related to the Oauth clients | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**OauthClientCollection**](OauthClientCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="findProcessById"></a>
 # **findProcessById**
 > ProcessItem findProcessById(id)
@@ -2661,60 +2201,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProcessItem**](ProcessItem.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findProcesses"></a>
-# **findProcesses**
-> ProcessCollection findProcesses(opts)
-
-
-
-This method retrieves all existing processes.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findProcesses(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**ProcessCollection**](ProcessCollection.md)
 
 ### Authorization
 
@@ -2836,69 +2322,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findTaskConnectors"></a>
-# **findTaskConnectors**
-> TaskConnectorsCollection findTaskConnectors(processId, taskId, opts)
-
-
-
-This method returns all task connectors related to the run process and task.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process to fetch
-
-var taskId = "taskId_example"; // String | ID of the task to fetch
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTaskConnectors(processId, taskId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process to fetch | 
- **taskId** | **String**| ID of the task to fetch | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**TaskConnectorsCollection**](TaskConnectorsCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="findTaskInstanceById"></a>
 # **findTaskInstanceById**
-> InlineResponse200 findTaskInstanceById(taskInstanceId, opts)
+> InlineResponse2001 findTaskInstanceById(taskInstanceId, opts)
 
 
 
@@ -2942,340 +2368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTaskInstances"></a>
-# **findTaskInstances**
-> TaskInstanceCollection findTaskInstances(opts)
-
-
-
-This method retrieves all existing task instances.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTaskInstances(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**TaskInstanceCollection**](TaskInstanceCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTaskInstancesByInstanceAndTaskId"></a>
-# **findTaskInstancesByInstanceAndTaskId**
-> TaskInstanceCollection findTaskInstancesByInstanceAndTaskId(instanceId, taskId)
-
-
-
-This method retrieves task instances using the instance ID and the task ID.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var instanceId = "instanceId_example"; // String | ID of the instance
-
-var taskId = "taskId_example"; // String | ID of the task
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTaskInstancesByInstanceAndTaskId(instanceId, taskId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceId** | **String**| ID of the instance | 
- **taskId** | **String**| ID of the task | 
-
-### Return type
-
-[**TaskInstanceCollection**](TaskInstanceCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTaskInstancesByInstanceAndTaskIdDelegated"></a>
-# **findTaskInstancesByInstanceAndTaskIdDelegated**
-> TaskInstanceCollection findTaskInstancesByInstanceAndTaskIdDelegated(instanceId, taskId)
-
-
-
-This method retrieves delegated task instances using the instance ID and the task ID.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var instanceId = "instanceId_example"; // String | ID of the instance
-
-var taskId = "taskId_example"; // String | ID of the task
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTaskInstancesByInstanceAndTaskIdDelegated(instanceId, taskId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceId** | **String**| ID of the instance | 
- **taskId** | **String**| ID of the task | 
-
-### Return type
-
-[**TaskInstanceCollection**](TaskInstanceCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTaskInstancesByInstanceAndTaskIdStarted"></a>
-# **findTaskInstancesByInstanceAndTaskIdStarted**
-> TaskInstanceCollection findTaskInstancesByInstanceAndTaskIdStarted(instanceId, taskId)
-
-
-
-This method retrieves started task instances using the instance ID and the task ID.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var instanceId = "instanceId_example"; // String | ID of the instance
-
-var taskId = "taskId_example"; // String | ID of the task
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTaskInstancesByInstanceAndTaskIdStarted(instanceId, taskId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceId** | **String**| ID of the instance | 
- **taskId** | **String**| ID of the task | 
-
-### Return type
-
-[**TaskInstanceCollection**](TaskInstanceCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTasks"></a>
-# **findTasks**
-> TaskCollection findTasks(processId, opts)
-
-
-
-This method is intended for returning a list of all tasks related to the process.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | ID of the process relative to the task
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTasks(processId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| ID of the process relative to the task | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**TaskCollection**](TaskCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
-<a name="findTokens"></a>
-# **findTokens**
-> TokenCollection findTokens(processId, instanceId, opts)
-
-
-
-This method retrieves tokens related to the process and instance using the process and instance IDs
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | Process ID
-
-var instanceId = "instanceId_example"; // String | Instance ID related to the process
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findTokens(processId, instanceId, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processId** | **String**| Process ID | 
- **instanceId** | **String**| Instance ID related to the process | 
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**TokenCollection**](TokenCollection.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -3337,60 +2430,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
-<a name="findUsers"></a>
-# **findUsers**
-> UserCollection findUsers(opts)
-
-
-
-This method returns all existing users in the system.
-
-### Example
-```javascript
-var PMIO = require('PMIO');
-var defaultClient = PMIO.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: PasswordGrant
-var PasswordGrant = defaultClient.authentications['PasswordGrant'];
-PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new PMIO.Client();
-
-var opts = { 
-  'page': 1, // Integer | Page number to fetch
-  'perPage': 15 // Integer | Amount of items per page
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findUsers(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| Page number to fetch | [optional] [default to 1]
- **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
-
-### Return type
-
-[**UserCollection**](UserCollection.md)
-
-### Authorization
-
-[PasswordGrant](../README.md#PasswordGrant)
-
-### HTTP request headers
-
- - **Content-Type**: application/vnd.api+json
- - **Accept**: application/vnd.api+json
-
 <a name="importBpmnFile"></a>
 # **importBpmnFile**
 > ProcessCollection1 importBpmnFile(bpmnImportItem)
@@ -3432,6 +2471,1144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProcessCollection1**](ProcessCollection1.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listByFieldInsideDataModel"></a>
+# **listByFieldInsideDataModel**
+> DataModelCollection listByFieldInsideDataModel(processId, searchParam, opts)
+
+
+
+This method returns the data model by field passed in get argument.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process to return
+
+var searchParam = "searchParam_example"; // String | Key and value of searched field in DataModel
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listByFieldInsideDataModel(processId, searchParam, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process to return | 
+ **searchParam** | **String**| Key and value of searched field in DataModel | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**DataModelCollection**](DataModelCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listEventConnectors"></a>
+# **listEventConnectors**
+> EventConnectorsCollection listEventConnectors(processId, eventId, opts)
+
+
+
+This method returns all event connectors related to the run process and Event.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process to fetch
+
+var eventId = "eventId_example"; // String | ID of the task to fetch
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listEventConnectors(processId, eventId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process to fetch | 
+ **eventId** | **String**| ID of the task to fetch | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**EventConnectorsCollection**](EventConnectorsCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listEvents"></a>
+# **listEvents**
+> EventCollection listEvents(processId, opts)
+
+
+
+This method returns all events related to the running process.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process related to the event
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listEvents(processId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process related to the event | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**EventCollection**](EventCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listFlows"></a>
+# **listFlows**
+> FlowCollection listFlows(processId, opts)
+
+
+
+This method retrieves all existing flows.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process related to the flow
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listFlows(processId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process related to the flow | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**FlowCollection**](FlowCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listGateways"></a>
+# **listGateways**
+> GatewayCollection listGateways(processId, opts)
+
+
+
+This method retrieves all existing gateways.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process related to the gateway
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listGateways(processId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process related to the gateway | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**GatewayCollection**](GatewayCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listGroups"></a>
+# **listGroups**
+> GroupCollection listGroups(opts)
+
+
+
+This method retrieves all existing groups.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listGroups(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**GroupCollection**](GroupCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listInputOutputs"></a>
+# **listInputOutputs**
+> InputOutputCollection listInputOutputs(processId, taskId, opts)
+
+
+
+This method retrieves all existing Input/Output objects in the related task instance.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | Process ID related to Input/Output object
+
+var taskId = "taskId_example"; // String | Task instance ID related to Input/Output object
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listInputOutputs(processId, taskId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| Process ID related to Input/Output object | 
+ **taskId** | **String**| Task instance ID related to Input/Output object | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**InputOutputCollection**](InputOutputCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listInstances"></a>
+# **listInstances**
+> InstanceCollection listInstances(processId, opts)
+
+
+
+This method retrieves instances related to the process using the process ID
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | Process ID related to the instances
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listInstances(processId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| Process ID related to the instances | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**InstanceCollection**](InstanceCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listLogs"></a>
+# **listLogs**
+> ListLogCollection listLogs(opts)
+
+
+
+This method retrieves all existing logs.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'search': "search_example", // String | The string to search in logs.
+  'order': "order_example", // String | The order of retrieved list.
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listLogs(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search** | **String**| The string to search in logs. | [optional] 
+ **order** | **String**| The order of retrieved list. | [optional] 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**ListLogCollection**](ListLogCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listOauthClients"></a>
+# **listOauthClients**
+> OauthClientCollection listOauthClients(userId, opts)
+
+
+
+This method retrieves all existing Oauth clients belonging to a user.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var userId = "userId_example"; // String | User ID related to the Oauth clients
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listOauthClients(userId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| User ID related to the Oauth clients | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**OauthClientCollection**](OauthClientCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listProcesses"></a>
+# **listProcesses**
+> ProcessCollection listProcesses(opts)
+
+
+
+This method retrieves all existing processes.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listProcesses(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**ProcessCollection**](ProcessCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTaskConnectors"></a>
+# **listTaskConnectors**
+> TaskConnectorsCollection listTaskConnectors(processId, taskId, opts)
+
+
+
+This method returns all task connectors related to the run process and task.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process to fetch
+
+var taskId = "taskId_example"; // String | ID of the task to fetch
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTaskConnectors(processId, taskId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process to fetch | 
+ **taskId** | **String**| ID of the task to fetch | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**TaskConnectorsCollection**](TaskConnectorsCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTaskInstances"></a>
+# **listTaskInstances**
+> TaskInstanceCollection listTaskInstances(opts)
+
+
+
+This method retrieves all existing task instances.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTaskInstances(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**TaskInstanceCollection**](TaskInstanceCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTaskInstancesByInstanceAndTaskId"></a>
+# **listTaskInstancesByInstanceAndTaskId**
+> TaskInstanceCollection listTaskInstancesByInstanceAndTaskId(instanceId, taskId)
+
+
+
+This method retrieves task instances using the instance ID and the task ID.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var instanceId = "instanceId_example"; // String | ID of the instance
+
+var taskId = "taskId_example"; // String | ID of the task
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTaskInstancesByInstanceAndTaskId(instanceId, taskId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceId** | **String**| ID of the instance | 
+ **taskId** | **String**| ID of the task | 
+
+### Return type
+
+[**TaskInstanceCollection**](TaskInstanceCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTaskInstancesByInstanceAndTaskIdDelegated"></a>
+# **listTaskInstancesByInstanceAndTaskIdDelegated**
+> TaskInstanceCollection listTaskInstancesByInstanceAndTaskIdDelegated(instanceId, taskId)
+
+
+
+This method retrieves delegated task instances using the instance ID and the task ID.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var instanceId = "instanceId_example"; // String | ID of the instance
+
+var taskId = "taskId_example"; // String | ID of the task
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTaskInstancesByInstanceAndTaskIdDelegated(instanceId, taskId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceId** | **String**| ID of the instance | 
+ **taskId** | **String**| ID of the task | 
+
+### Return type
+
+[**TaskInstanceCollection**](TaskInstanceCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTaskInstancesByInstanceAndTaskIdStarted"></a>
+# **listTaskInstancesByInstanceAndTaskIdStarted**
+> TaskInstanceCollection listTaskInstancesByInstanceAndTaskIdStarted(instanceId, taskId)
+
+
+
+This method retrieves started task instances using the instance ID and the task ID.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var instanceId = "instanceId_example"; // String | ID of the instance
+
+var taskId = "taskId_example"; // String | ID of the task
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTaskInstancesByInstanceAndTaskIdStarted(instanceId, taskId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceId** | **String**| ID of the instance | 
+ **taskId** | **String**| ID of the task | 
+
+### Return type
+
+[**TaskInstanceCollection**](TaskInstanceCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTasks"></a>
+# **listTasks**
+> TaskCollection listTasks(processId, opts)
+
+
+
+This method is intended for returning a list of all tasks related to the process.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | ID of the process relative to the task
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTasks(processId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| ID of the process relative to the task | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**TaskCollection**](TaskCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listTokens"></a>
+# **listTokens**
+> TokenCollection listTokens(processId, instanceId, opts)
+
+
+
+This method retrieves tokens related to the process and instance using the process and instance IDs
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | Process ID
+
+var instanceId = "instanceId_example"; // String | Instance ID related to the process
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listTokens(processId, instanceId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| Process ID | 
+ **instanceId** | **String**| Instance ID related to the process | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**TokenCollection**](TokenCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="listUsers"></a>
+# **listUsers**
+> UserCollection listUsers(opts)
+
+
+
+This method returns all existing users in the system.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listUsers(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**UserCollection**](UserCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
+<a name="logSummary"></a>
+# **logSummary**
+> InlineResponse200 logSummary(opts)
+
+
+
+This method retrieves all existing logs by action and period.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'action': "action_example", // String | The action to search in logs.
+  'dateFrom': "dateFrom_example", // String | Start date for retrieved list.
+  'dateTo': "dateTo_example", // String | End date for retrieved list.
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.logSummary(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **action** | **String**| The action to search in logs. | [optional] 
+ **dateFrom** | **String**| Start date for retrieved list. | [optional] 
+ **dateTo** | **String**| End date for retrieved list. | [optional] 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -4350,7 +4527,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaskInstance"></a>
 # **updateTaskInstance**
-> InlineResponse200 updateTaskInstance(taskInstanceId, taskInstanceUpdateItem)
+> InlineResponse2001 updateTaskInstance(taskInstanceId, taskInstanceUpdateItem)
 
 
 
@@ -4391,7 +4568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

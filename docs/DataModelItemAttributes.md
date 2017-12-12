@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **Object** |  | 
+**dataModel** | **Object** |  | 
 
 
