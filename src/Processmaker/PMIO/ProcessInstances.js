@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/InstanceUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/InstanceUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/ResultSuccess'), require('../Model/DataModelItem1'), require('../Model/DataModelCollection'), require('../Model/InstanceCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TokenCollection'), require('../Model/InstanceUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/ErrorArray'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/ResultSuccess'), require('../Model/DataModelItem1'), require('../Model/DataModelCollection'), require('../Model/TokenCollection'), require('../Model/InstanceCollection'), require('../Model/TaskInstanceCollection'), require('../Model/InstanceUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.ProcessInstances = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.ResultSuccess, root.PMIO.DataModelItem1, root.PMIO.DataModelCollection, root.PMIO.InstanceCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TokenCollection, root.PMIO.InstanceUpdateItem);
+    root.PMIO.ProcessInstances = factory(root.PMIO.ApiClient, root.PMIO.ErrorArray, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.ResultSuccess, root.PMIO.DataModelItem1, root.PMIO.DataModelCollection, root.PMIO.TokenCollection, root.PMIO.InstanceCollection, root.PMIO.TaskInstanceCollection, root.PMIO.InstanceUpdateItem);
   }
-}(this, function(ApiClient, ErrorArray, InstanceCreateItem, InstanceItem, ResultSuccess, DataModelItem1, DataModelCollection, InstanceCollection, TaskInstanceCollection, TokenCollection, InstanceUpdateItem) {
+}(this, function(ApiClient, ErrorArray, InstanceCreateItem, InstanceItem, ResultSuccess, DataModelItem1, DataModelCollection, TokenCollection, InstanceCollection, TaskInstanceCollection, InstanceUpdateItem) {
   'use strict';
 
   /**
@@ -328,6 +328,64 @@
     }
 
     /**
+     * Callback function to receive the result of the listInstanceTokens operation.
+     * @callback module:Processmaker/PMIO/ProcessInstances~listInstanceTokensCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TokenCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves tokens related to the process and instance using the process and instance IDs
+     * @param {String} processId Process ID
+     * @param {String} instanceId Instance ID related to the process
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/ProcessInstances~listInstanceTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TokenCollection}
+     */
+    this.listInstanceTokens = function(processId, instanceId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listInstanceTokens";
+      }
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listInstanceTokens";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'instance_id': instanceId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TokenCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listInstances operation.
      * @callback module:Processmaker/PMIO/ProcessInstances~listInstancesCallback
      * @param {String} error Error message, if any.
@@ -543,33 +601,19 @@
      */
 
     /**
-     * This method retrieves tokens related to the process and instance using the process and instance IDs
-     * @param {String} processId Process ID
-     * @param {String} instanceId Instance ID related to the process
+     * This method retrieves all tokens of the environment.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
      * @param {module:Processmaker/PMIO/ProcessInstances~listTokensCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TokenCollection}
      */
-    this.listTokens = function(processId, instanceId, opts, callback) {
+    this.listTokens = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling listTokens";
-      }
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling listTokens";
-      }
-
 
       var pathParams = {
-        'process_id': processId,
-        'instance_id': instanceId
       };
       var queryParams = {
         'page': opts['page'],
@@ -586,7 +630,7 @@
       var returnType = TokenCollection;
 
       return this.apiClient.callApi(
-        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
+        '/tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

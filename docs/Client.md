@@ -48,6 +48,7 @@ Method | HTTP request | Description
 [**findTaskInstanceById**](Client.md#findTaskInstanceById) | **GET** /task_instances/{task_instance_id} | 
 [**findUserById**](Client.md#findUserById) | **GET** /users/{id} | 
 [**importBpmnFile**](Client.md#importBpmnFile) | **POST** /processes/import | 
+[**listAggregatedLogs**](Client.md#listAggregatedLogs) | **GET** /logs/aggregated | 
 [**listByFieldInsideDataModel**](Client.md#listByFieldInsideDataModel) | **GET** /processes/{process_id}/datamodels/search/{search_param} | 
 [**listEventConnectors**](Client.md#listEventConnectors) | **GET** /processes/{process_id}/events/{event_id}/connectors | 
 [**listEvents**](Client.md#listEvents) | **GET** /processes/{process_id}/events | 
@@ -55,6 +56,7 @@ Method | HTTP request | Description
 [**listGateways**](Client.md#listGateways) | **GET** /processes/{process_id}/gateways | 
 [**listGroups**](Client.md#listGroups) | **GET** /groups | 
 [**listInputOutputs**](Client.md#listInputOutputs) | **GET** /processes/{process_id}/tasks/{task_id}/inputoutput | 
+[**listInstanceTokens**](Client.md#listInstanceTokens) | **GET** /processes/{process_id}/instances/{instance_id}/tokens | 
 [**listInstances**](Client.md#listInstances) | **GET** /processes/{process_id}/instances | 
 [**listLogs**](Client.md#listLogs) | **GET** /logs/ | 
 [**listOauthClients**](Client.md#listOauthClients) | **GET** /users/{user_id}/clients | 
@@ -65,7 +67,7 @@ Method | HTTP request | Description
 [**listTaskInstancesByInstanceAndTaskIdDelegated**](Client.md#listTaskInstancesByInstanceAndTaskIdDelegated) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/delegated | 
 [**listTaskInstancesByInstanceAndTaskIdStarted**](Client.md#listTaskInstancesByInstanceAndTaskIdStarted) | **GET** /instances/{instance_id}/tasks/{task_id}/task_instances/started | 
 [**listTasks**](Client.md#listTasks) | **GET** /processes/{process_id}/tasks | 
-[**listTokens**](Client.md#listTokens) | **GET** /processes/{process_id}/instances/{instance_id}/tokens | 
+[**listTokens**](Client.md#listTokens) | **GET** /tokens | 
 [**listUsers**](Client.md#listUsers) | **GET** /users | 
 [**logSummary**](Client.md#logSummary) | **GET** /logs/summary | 
 [**myselfUser**](Client.md#myselfUser) | **GET** /users/myself | 
@@ -2481,6 +2483,66 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
+<a name="listAggregatedLogs"></a>
+# **listAggregatedLogs**
+> ListAggregatedLogCollection listAggregatedLogs(opts)
+
+
+
+This method retrieves all existing aggregated logs.
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var opts = { 
+  'action': "processToken", // String | The string to filter by action.
+  'interval': "day", // String | The string to filter by period, accepted values: day|hour|month
+  'processId': "processId_example", // String | The string to filter by the process ID.
+  'dateFrom': "dateFrom_example", // String | Start date for retrieved list.
+  'dateTo': "dateTo_example" // String | End date for retrieved list.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listAggregatedLogs(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **action** | **String**| The string to filter by action. | [optional] [default to processToken]
+ **interval** | **String**| The string to filter by period, accepted values: day|hour|month | [optional] [default to day]
+ **processId** | **String**| The string to filter by the process ID. | [optional] 
+ **dateFrom** | **String**| Start date for retrieved list. | [optional] 
+ **dateTo** | **String**| End date for retrieved list. | [optional] 
+
+### Return type
+
+[**ListAggregatedLogCollection**](ListAggregatedLogCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
 <a name="listByFieldInsideDataModel"></a>
 # **listByFieldInsideDataModel**
 > DataModelCollection listByFieldInsideDataModel(processId, searchParam, opts)
@@ -2886,6 +2948,66 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/vnd.api+json
  - **Accept**: application/vnd.api+json
 
+<a name="listInstanceTokens"></a>
+# **listInstanceTokens**
+> TokenCollection listInstanceTokens(processId, instanceId, opts)
+
+
+
+This method retrieves tokens related to the process and instance using the process and instance IDs
+
+### Example
+```javascript
+var PMIO = require('PMIO');
+var defaultClient = PMIO.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: PasswordGrant
+var PasswordGrant = defaultClient.authentications['PasswordGrant'];
+PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new PMIO.Client();
+
+var processId = "processId_example"; // String | Process ID
+
+var instanceId = "instanceId_example"; // String | Instance ID related to the process
+
+var opts = { 
+  'page': 1, // Integer | Page number to fetch
+  'perPage': 15 // Integer | Amount of items per page
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.listInstanceTokens(processId, instanceId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processId** | **String**| Process ID | 
+ **instanceId** | **String**| Instance ID related to the process | 
+ **page** | **Integer**| Page number to fetch | [optional] [default to 1]
+ **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
+
+### Return type
+
+[**TokenCollection**](TokenCollection.md)
+
+### Authorization
+
+[PasswordGrant](../README.md#PasswordGrant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/vnd.api+json
+ - **Accept**: application/vnd.api+json
+
 <a name="listInstances"></a>
 # **listInstances**
 > InstanceCollection listInstances(processId, opts)
@@ -2965,6 +3087,9 @@ var apiInstance = new PMIO.Client();
 var opts = { 
   'search': "search_example", // String | The string to search in logs.
   'order': "order_example", // String | The order of retrieved list.
+  'processId': "processId_example", // String | Filter by the process ID.
+  'dateFrom': "dateFrom_example", // String | Start date for retrieved list.
+  'dateTo': "dateTo_example", // String | End date for retrieved list.
   'page': 1, // Integer | Page number to fetch
   'perPage': 15 // Integer | Amount of items per page
 };
@@ -2985,6 +3110,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search** | **String**| The string to search in logs. | [optional] 
  **order** | **String**| The order of retrieved list. | [optional] 
+ **processId** | **String**| Filter by the process ID. | [optional] 
+ **dateFrom** | **String**| Start date for retrieved list. | [optional] 
+ **dateTo** | **String**| End date for retrieved list. | [optional] 
  **page** | **Integer**| Page number to fetch | [optional] [default to 1]
  **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
 
@@ -3447,11 +3575,11 @@ Name | Type | Description  | Notes
 
 <a name="listTokens"></a>
 # **listTokens**
-> TokenCollection listTokens(processId, instanceId, opts)
+> TokenCollection listTokens(opts)
 
 
 
-This method retrieves tokens related to the process and instance using the process and instance IDs
+This method retrieves all tokens of the environment.
 
 ### Example
 ```javascript
@@ -3463,10 +3591,6 @@ var PasswordGrant = defaultClient.authentications['PasswordGrant'];
 PasswordGrant.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new PMIO.Client();
-
-var processId = "processId_example"; // String | Process ID
-
-var instanceId = "instanceId_example"; // String | Instance ID related to the process
 
 var opts = { 
   'page': 1, // Integer | Page number to fetch
@@ -3480,15 +3604,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.listTokens(processId, instanceId, opts, callback);
+apiInstance.listTokens(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **processId** | **String**| Process ID | 
- **instanceId** | **String**| Instance ID related to the process | 
  **page** | **Integer**| Page number to fetch | [optional] [default to 1]
  **perPage** | **Integer**| Amount of items per page | [optional] [default to 15]
 
@@ -3580,6 +3702,7 @@ var apiInstance = new PMIO.Client();
 
 var opts = { 
   'action': "action_example", // String | The action to search in logs.
+  'processId': "processId_example", // String | Filter by the process ID.
   'dateFrom': "dateFrom_example", // String | Start date for retrieved list.
   'dateTo': "dateTo_example", // String | End date for retrieved list.
   'page': 1, // Integer | Page number to fetch
@@ -3601,6 +3724,7 @@ apiInstance.logSummary(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action** | **String**| The action to search in logs. | [optional] 
+ **processId** | **String**| Filter by the process ID. | [optional] 
  **dateFrom** | **String**| Start date for retrieved list. | [optional] 
  **dateTo** | **String**| End date for retrieved list. | [optional] 
  **page** | **Integer**| Page number to fetch | [optional] [default to 1]

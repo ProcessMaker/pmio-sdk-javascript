@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Processmaker/ApiClient', 'Processmaker/Model/EventItem', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/OauthClientCreateItem', 'Processmaker/Model/OauthClientItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/ImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/InlineResponse2001', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCollection', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/ListLogCollection', 'Processmaker/Model/OauthClientCollection', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/UserCollection', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/OauthClientUpdateItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/UserUpdateItem'], factory);
+    define(['Processmaker/ApiClient', 'Processmaker/Model/EventItem', 'Processmaker/Model/ErrorArray', 'Processmaker/Model/EventCreateItem', 'Processmaker/Model/EventConnector1', 'Processmaker/Model/EventConnectorCreateItem', 'Processmaker/Model/FlowCreateItem', 'Processmaker/Model/FlowItem', 'Processmaker/Model/GatewayItem', 'Processmaker/Model/GatewayCreateItem', 'Processmaker/Model/GroupCreateItem', 'Processmaker/Model/GroupItem', 'Processmaker/Model/ResultSuccess', 'Processmaker/Model/TaskAddGroupsItem', 'Processmaker/Model/InputOutputCreateItem', 'Processmaker/Model/InputOutputItem', 'Processmaker/Model/InstanceCreateItem', 'Processmaker/Model/InstanceItem', 'Processmaker/Model/OauthClientCreateItem', 'Processmaker/Model/OauthClientItem', 'Processmaker/Model/ProcessItem', 'Processmaker/Model/ProcessCreateItem', 'Processmaker/Model/TaskItem', 'Processmaker/Model/TaskCreateItem', 'Processmaker/Model/TaskConnectorCreateItem', 'Processmaker/Model/TaskConnector1', 'Processmaker/Model/UserItem', 'Processmaker/Model/UserCreateItem', 'Processmaker/Model/GroupAddUsersItem', 'Processmaker/Model/ImportItem', 'Processmaker/Model/ProcessCollection1', 'Processmaker/Model/DataModelItem1', 'Processmaker/Model/TriggerEventCreateItem', 'Processmaker/Model/InlineResponse2001', 'Processmaker/Model/BpmnImportItem', 'Processmaker/Model/ListAggregatedLogCollection', 'Processmaker/Model/DataModelCollection', 'Processmaker/Model/EventConnectorsCollection', 'Processmaker/Model/EventCollection', 'Processmaker/Model/FlowCollection', 'Processmaker/Model/GatewayCollection', 'Processmaker/Model/GroupCollection', 'Processmaker/Model/InputOutputCollection', 'Processmaker/Model/TokenCollection', 'Processmaker/Model/InstanceCollection', 'Processmaker/Model/ListLogCollection', 'Processmaker/Model/OauthClientCollection', 'Processmaker/Model/ProcessCollection', 'Processmaker/Model/TaskConnectorsCollection', 'Processmaker/Model/TaskInstanceCollection', 'Processmaker/Model/TaskCollection', 'Processmaker/Model/UserCollection', 'Processmaker/Model/InlineResponse200', 'Processmaker/Model/TaskRemoveGroupsItem', 'Processmaker/Model/GroupRemoveUsersItem', 'Processmaker/Model/TaskSyncGroupsItem', 'Processmaker/Model/GroupSyncUsersItem', 'Processmaker/Model/EventUpdateItem', 'Processmaker/Model/EventConnectorUpdateItem', 'Processmaker/Model/FlowUpdateItem', 'Processmaker/Model/GatewayUpdateItem', 'Processmaker/Model/GroupUpdateItem', 'Processmaker/Model/InputOutputUpdateItem', 'Processmaker/Model/InstanceUpdateItem', 'Processmaker/Model/OauthClientUpdateItem', 'Processmaker/Model/ProcessUpdateItem', 'Processmaker/Model/TaskUpdateItem', 'Processmaker/Model/TaskConnectorUpdateItem', 'Processmaker/Model/TaskInstanceUpdateItem', 'Processmaker/Model/UserUpdateItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Model/EventItem'), require('../Model/ErrorArray'), require('../Model/EventCreateItem'), require('../Model/EventConnector1'), require('../Model/EventConnectorCreateItem'), require('../Model/FlowCreateItem'), require('../Model/FlowItem'), require('../Model/GatewayItem'), require('../Model/GatewayCreateItem'), require('../Model/GroupCreateItem'), require('../Model/GroupItem'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/InputOutputCreateItem'), require('../Model/InputOutputItem'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/OauthClientCreateItem'), require('../Model/OauthClientItem'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/UserItem'), require('../Model/UserCreateItem'), require('../Model/GroupAddUsersItem'), require('../Model/ImportItem'), require('../Model/ProcessCollection1'), require('../Model/DataModelItem1'), require('../Model/TriggerEventCreateItem'), require('../Model/InlineResponse2001'), require('../Model/BpmnImportItem'), require('../Model/DataModelCollection'), require('../Model/EventConnectorsCollection'), require('../Model/EventCollection'), require('../Model/FlowCollection'), require('../Model/GatewayCollection'), require('../Model/GroupCollection'), require('../Model/InputOutputCollection'), require('../Model/InstanceCollection'), require('../Model/ListLogCollection'), require('../Model/OauthClientCollection'), require('../Model/ProcessCollection'), require('../Model/TaskConnectorsCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/TokenCollection'), require('../Model/UserCollection'), require('../Model/InlineResponse200'), require('../Model/TaskRemoveGroupsItem'), require('../Model/GroupRemoveUsersItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/GroupSyncUsersItem'), require('../Model/EventUpdateItem'), require('../Model/EventConnectorUpdateItem'), require('../Model/FlowUpdateItem'), require('../Model/GatewayUpdateItem'), require('../Model/GroupUpdateItem'), require('../Model/InputOutputUpdateItem'), require('../Model/InstanceUpdateItem'), require('../Model/OauthClientUpdateItem'), require('../Model/ProcessUpdateItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'), require('../Model/UserUpdateItem'));
+    module.exports = factory(require('../ApiClient'), require('../Model/EventItem'), require('../Model/ErrorArray'), require('../Model/EventCreateItem'), require('../Model/EventConnector1'), require('../Model/EventConnectorCreateItem'), require('../Model/FlowCreateItem'), require('../Model/FlowItem'), require('../Model/GatewayItem'), require('../Model/GatewayCreateItem'), require('../Model/GroupCreateItem'), require('../Model/GroupItem'), require('../Model/ResultSuccess'), require('../Model/TaskAddGroupsItem'), require('../Model/InputOutputCreateItem'), require('../Model/InputOutputItem'), require('../Model/InstanceCreateItem'), require('../Model/InstanceItem'), require('../Model/OauthClientCreateItem'), require('../Model/OauthClientItem'), require('../Model/ProcessItem'), require('../Model/ProcessCreateItem'), require('../Model/TaskItem'), require('../Model/TaskCreateItem'), require('../Model/TaskConnectorCreateItem'), require('../Model/TaskConnector1'), require('../Model/UserItem'), require('../Model/UserCreateItem'), require('../Model/GroupAddUsersItem'), require('../Model/ImportItem'), require('../Model/ProcessCollection1'), require('../Model/DataModelItem1'), require('../Model/TriggerEventCreateItem'), require('../Model/InlineResponse2001'), require('../Model/BpmnImportItem'), require('../Model/ListAggregatedLogCollection'), require('../Model/DataModelCollection'), require('../Model/EventConnectorsCollection'), require('../Model/EventCollection'), require('../Model/FlowCollection'), require('../Model/GatewayCollection'), require('../Model/GroupCollection'), require('../Model/InputOutputCollection'), require('../Model/TokenCollection'), require('../Model/InstanceCollection'), require('../Model/ListLogCollection'), require('../Model/OauthClientCollection'), require('../Model/ProcessCollection'), require('../Model/TaskConnectorsCollection'), require('../Model/TaskInstanceCollection'), require('../Model/TaskCollection'), require('../Model/UserCollection'), require('../Model/InlineResponse200'), require('../Model/TaskRemoveGroupsItem'), require('../Model/GroupRemoveUsersItem'), require('../Model/TaskSyncGroupsItem'), require('../Model/GroupSyncUsersItem'), require('../Model/EventUpdateItem'), require('../Model/EventConnectorUpdateItem'), require('../Model/FlowUpdateItem'), require('../Model/GatewayUpdateItem'), require('../Model/GroupUpdateItem'), require('../Model/InputOutputUpdateItem'), require('../Model/InstanceUpdateItem'), require('../Model/OauthClientUpdateItem'), require('../Model/ProcessUpdateItem'), require('../Model/TaskUpdateItem'), require('../Model/TaskConnectorUpdateItem'), require('../Model/TaskInstanceUpdateItem'), require('../Model/UserUpdateItem'));
   } else {
     // Browser globals (root is window)
     if (!root.PMIO) {
       root.PMIO = {};
     }
-    root.PMIO.Client = factory(root.PMIO.ApiClient, root.PMIO.EventItem, root.PMIO.ErrorArray, root.PMIO.EventCreateItem, root.PMIO.EventConnector1, root.PMIO.EventConnectorCreateItem, root.PMIO.FlowCreateItem, root.PMIO.FlowItem, root.PMIO.GatewayItem, root.PMIO.GatewayCreateItem, root.PMIO.GroupCreateItem, root.PMIO.GroupItem, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.InputOutputCreateItem, root.PMIO.InputOutputItem, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.OauthClientCreateItem, root.PMIO.OauthClientItem, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.UserItem, root.PMIO.UserCreateItem, root.PMIO.GroupAddUsersItem, root.PMIO.ImportItem, root.PMIO.ProcessCollection1, root.PMIO.DataModelItem1, root.PMIO.TriggerEventCreateItem, root.PMIO.InlineResponse2001, root.PMIO.BpmnImportItem, root.PMIO.DataModelCollection, root.PMIO.EventConnectorsCollection, root.PMIO.EventCollection, root.PMIO.FlowCollection, root.PMIO.GatewayCollection, root.PMIO.GroupCollection, root.PMIO.InputOutputCollection, root.PMIO.InstanceCollection, root.PMIO.ListLogCollection, root.PMIO.OauthClientCollection, root.PMIO.ProcessCollection, root.PMIO.TaskConnectorsCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.TokenCollection, root.PMIO.UserCollection, root.PMIO.InlineResponse200, root.PMIO.TaskRemoveGroupsItem, root.PMIO.GroupRemoveUsersItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.GroupSyncUsersItem, root.PMIO.EventUpdateItem, root.PMIO.EventConnectorUpdateItem, root.PMIO.FlowUpdateItem, root.PMIO.GatewayUpdateItem, root.PMIO.GroupUpdateItem, root.PMIO.InputOutputUpdateItem, root.PMIO.InstanceUpdateItem, root.PMIO.OauthClientUpdateItem, root.PMIO.ProcessUpdateItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem, root.PMIO.UserUpdateItem);
+    root.PMIO.Client = factory(root.PMIO.ApiClient, root.PMIO.EventItem, root.PMIO.ErrorArray, root.PMIO.EventCreateItem, root.PMIO.EventConnector1, root.PMIO.EventConnectorCreateItem, root.PMIO.FlowCreateItem, root.PMIO.FlowItem, root.PMIO.GatewayItem, root.PMIO.GatewayCreateItem, root.PMIO.GroupCreateItem, root.PMIO.GroupItem, root.PMIO.ResultSuccess, root.PMIO.TaskAddGroupsItem, root.PMIO.InputOutputCreateItem, root.PMIO.InputOutputItem, root.PMIO.InstanceCreateItem, root.PMIO.InstanceItem, root.PMIO.OauthClientCreateItem, root.PMIO.OauthClientItem, root.PMIO.ProcessItem, root.PMIO.ProcessCreateItem, root.PMIO.TaskItem, root.PMIO.TaskCreateItem, root.PMIO.TaskConnectorCreateItem, root.PMIO.TaskConnector1, root.PMIO.UserItem, root.PMIO.UserCreateItem, root.PMIO.GroupAddUsersItem, root.PMIO.ImportItem, root.PMIO.ProcessCollection1, root.PMIO.DataModelItem1, root.PMIO.TriggerEventCreateItem, root.PMIO.InlineResponse2001, root.PMIO.BpmnImportItem, root.PMIO.ListAggregatedLogCollection, root.PMIO.DataModelCollection, root.PMIO.EventConnectorsCollection, root.PMIO.EventCollection, root.PMIO.FlowCollection, root.PMIO.GatewayCollection, root.PMIO.GroupCollection, root.PMIO.InputOutputCollection, root.PMIO.TokenCollection, root.PMIO.InstanceCollection, root.PMIO.ListLogCollection, root.PMIO.OauthClientCollection, root.PMIO.ProcessCollection, root.PMIO.TaskConnectorsCollection, root.PMIO.TaskInstanceCollection, root.PMIO.TaskCollection, root.PMIO.UserCollection, root.PMIO.InlineResponse200, root.PMIO.TaskRemoveGroupsItem, root.PMIO.GroupRemoveUsersItem, root.PMIO.TaskSyncGroupsItem, root.PMIO.GroupSyncUsersItem, root.PMIO.EventUpdateItem, root.PMIO.EventConnectorUpdateItem, root.PMIO.FlowUpdateItem, root.PMIO.GatewayUpdateItem, root.PMIO.GroupUpdateItem, root.PMIO.InputOutputUpdateItem, root.PMIO.InstanceUpdateItem, root.PMIO.OauthClientUpdateItem, root.PMIO.ProcessUpdateItem, root.PMIO.TaskUpdateItem, root.PMIO.TaskConnectorUpdateItem, root.PMIO.TaskInstanceUpdateItem, root.PMIO.UserUpdateItem);
   }
-}(this, function(ApiClient, EventItem, ErrorArray, EventCreateItem, EventConnector1, EventConnectorCreateItem, FlowCreateItem, FlowItem, GatewayItem, GatewayCreateItem, GroupCreateItem, GroupItem, ResultSuccess, TaskAddGroupsItem, InputOutputCreateItem, InputOutputItem, InstanceCreateItem, InstanceItem, OauthClientCreateItem, OauthClientItem, ProcessItem, ProcessCreateItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, UserItem, UserCreateItem, GroupAddUsersItem, ImportItem, ProcessCollection1, DataModelItem1, TriggerEventCreateItem, InlineResponse2001, BpmnImportItem, DataModelCollection, EventConnectorsCollection, EventCollection, FlowCollection, GatewayCollection, GroupCollection, InputOutputCollection, InstanceCollection, ListLogCollection, OauthClientCollection, ProcessCollection, TaskConnectorsCollection, TaskInstanceCollection, TaskCollection, TokenCollection, UserCollection, InlineResponse200, TaskRemoveGroupsItem, GroupRemoveUsersItem, TaskSyncGroupsItem, GroupSyncUsersItem, EventUpdateItem, EventConnectorUpdateItem, FlowUpdateItem, GatewayUpdateItem, GroupUpdateItem, InputOutputUpdateItem, InstanceUpdateItem, OauthClientUpdateItem, ProcessUpdateItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem, UserUpdateItem) {
+}(this, function(ApiClient, EventItem, ErrorArray, EventCreateItem, EventConnector1, EventConnectorCreateItem, FlowCreateItem, FlowItem, GatewayItem, GatewayCreateItem, GroupCreateItem, GroupItem, ResultSuccess, TaskAddGroupsItem, InputOutputCreateItem, InputOutputItem, InstanceCreateItem, InstanceItem, OauthClientCreateItem, OauthClientItem, ProcessItem, ProcessCreateItem, TaskItem, TaskCreateItem, TaskConnectorCreateItem, TaskConnector1, UserItem, UserCreateItem, GroupAddUsersItem, ImportItem, ProcessCollection1, DataModelItem1, TriggerEventCreateItem, InlineResponse2001, BpmnImportItem, ListAggregatedLogCollection, DataModelCollection, EventConnectorsCollection, EventCollection, FlowCollection, GatewayCollection, GroupCollection, InputOutputCollection, TokenCollection, InstanceCollection, ListLogCollection, OauthClientCollection, ProcessCollection, TaskConnectorsCollection, TaskInstanceCollection, TaskCollection, UserCollection, InlineResponse200, TaskRemoveGroupsItem, GroupRemoveUsersItem, TaskSyncGroupsItem, GroupSyncUsersItem, EventUpdateItem, EventConnectorUpdateItem, FlowUpdateItem, GatewayUpdateItem, GroupUpdateItem, InputOutputUpdateItem, InstanceUpdateItem, OauthClientUpdateItem, ProcessUpdateItem, TaskUpdateItem, TaskConnectorUpdateItem, TaskInstanceUpdateItem, UserUpdateItem) {
   'use strict';
 
   /**
@@ -2341,6 +2341,56 @@
     }
 
     /**
+     * Callback function to receive the result of the listAggregatedLogs operation.
+     * @callback module:Processmaker/PMIO/Client~listAggregatedLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/ListAggregatedLogCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves all existing aggregated logs.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.action The string to filter by action. (default to processToken)
+     * @param {module:Processmaker/Model/String} opts.interval The string to filter by period, accepted values: day|hour|month (default to day)
+     * @param {String} opts.processId The string to filter by the process ID.
+     * @param {String} opts.dateFrom Start date for retrieved list.
+     * @param {String} opts.dateTo End date for retrieved list.
+     * @param {module:Processmaker/PMIO/Client~listAggregatedLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/ListAggregatedLogCollection}
+     */
+    this.listAggregatedLogs = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'action': opts['action'],
+        'interval': opts['interval'],
+        'process_id': opts['processId'],
+        'date_from': opts['dateFrom'],
+        'date_to': opts['dateTo']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = ListAggregatedLogCollection;
+
+      return this.apiClient.callApi(
+        '/logs/aggregated', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listByFieldInsideDataModel operation.
      * @callback module:Processmaker/PMIO/Client~listByFieldInsideDataModelCallback
      * @param {String} error Error message, if any.
@@ -2712,6 +2762,64 @@
     }
 
     /**
+     * Callback function to receive the result of the listInstanceTokens operation.
+     * @callback module:Processmaker/PMIO/Client~listInstanceTokensCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Processmaker/Model/TokenCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This method retrieves tokens related to the process and instance using the process and instance IDs
+     * @param {String} processId Process ID
+     * @param {String} instanceId Instance ID related to the process
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number to fetch (default to 1)
+     * @param {Integer} opts.perPage Amount of items per page (default to 15)
+     * @param {module:Processmaker/PMIO/Client~listInstanceTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Processmaker/Model/TokenCollection}
+     */
+    this.listInstanceTokens = function(processId, instanceId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'processId' is set
+      if (processId == undefined || processId == null) {
+        throw "Missing the required parameter 'processId' when calling listInstanceTokens";
+      }
+
+      // verify the required parameter 'instanceId' is set
+      if (instanceId == undefined || instanceId == null) {
+        throw "Missing the required parameter 'instanceId' when calling listInstanceTokens";
+      }
+
+
+      var pathParams = {
+        'process_id': processId,
+        'instance_id': instanceId
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['PasswordGrant'];
+      var contentTypes = ['application/vnd.api+json'];
+      var accepts = ['application/vnd.api+json'];
+      var returnType = TokenCollection;
+
+      return this.apiClient.callApi(
+        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listInstances operation.
      * @callback module:Processmaker/PMIO/Client~listInstancesCallback
      * @param {String} error Error message, if any.
@@ -2775,6 +2883,9 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.search The string to search in logs.
      * @param {String} opts.order The order of retrieved list.
+     * @param {String} opts.processId Filter by the process ID.
+     * @param {String} opts.dateFrom Start date for retrieved list.
+     * @param {String} opts.dateTo End date for retrieved list.
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
      * @param {module:Processmaker/PMIO/Client~listLogsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -2790,6 +2901,9 @@
       var queryParams = {
         'search': opts['search'],
         'order': opts['order'],
+        'process_id': opts['processId'],
+        'date_from': opts['dateFrom'],
+        'date_to': opts['dateTo'],
         'page': opts['page'],
         'per_page': opts['perPage']
       };
@@ -3223,33 +3337,19 @@
      */
 
     /**
-     * This method retrieves tokens related to the process and instance using the process and instance IDs
-     * @param {String} processId Process ID
-     * @param {String} instanceId Instance ID related to the process
+     * This method retrieves all tokens of the environment.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page Page number to fetch (default to 1)
      * @param {Integer} opts.perPage Amount of items per page (default to 15)
      * @param {module:Processmaker/PMIO/Client~listTokensCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Processmaker/Model/TokenCollection}
      */
-    this.listTokens = function(processId, instanceId, opts, callback) {
+    this.listTokens = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'processId' is set
-      if (processId == undefined || processId == null) {
-        throw "Missing the required parameter 'processId' when calling listTokens";
-      }
-
-      // verify the required parameter 'instanceId' is set
-      if (instanceId == undefined || instanceId == null) {
-        throw "Missing the required parameter 'instanceId' when calling listTokens";
-      }
-
 
       var pathParams = {
-        'process_id': processId,
-        'instance_id': instanceId
       };
       var queryParams = {
         'page': opts['page'],
@@ -3266,7 +3366,7 @@
       var returnType = TokenCollection;
 
       return this.apiClient.callApi(
-        '/processes/{process_id}/instances/{instance_id}/tokens', 'GET',
+        '/tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3328,6 +3428,7 @@
      * This method retrieves all existing logs by action and period.
      * @param {Object} opts Optional parameters
      * @param {String} opts.action The action to search in logs.
+     * @param {String} opts.processId Filter by the process ID.
      * @param {String} opts.dateFrom Start date for retrieved list.
      * @param {String} opts.dateTo End date for retrieved list.
      * @param {Integer} opts.page Page number to fetch (default to 1)
@@ -3344,6 +3445,7 @@
       };
       var queryParams = {
         'action': opts['action'],
+        'process_id': opts['processId'],
         'date_from': opts['dateFrom'],
         'date_to': opts['dateTo'],
         'page': opts['page'],
